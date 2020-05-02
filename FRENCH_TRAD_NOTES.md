@@ -38,6 +38,7 @@ Je le ferai de manière régulière, cela permettra de s'assurer que le markdown
 nécessitent quelques explication, ajoutez les ici. Cela facilitera la relecture.*
 La relecture doit fermer tous les points ouverts d'une partie. 
 
+Général : . ou , pour les pourcentages ?
 
 ### Intro |L25-L41
 - L25: maybe cite - _Franklin D. Roosevelt_
@@ -52,7 +53,12 @@ link to roosevelt sentence meaning understandable
 - L39 Epidemiologie 101 will not be understood sound French
 
 ### LastMonths: Curves
+### LastMonths: R
 
+### NextMonths : Scenario 0-3:
+- L250 Intensive Care Unit -> Unité de Soins Intensifs ? Réanimation ?
+- L269 *Sigh* -> *Soupir* ?(ne me semble pas naturel dans un article en français)
+- L284 Pooled Value -> Valeur médiane ?
 
 ## Choix de traductions
 Ajoutez des choix de traduction de mots/expressions spécifiques qui doivent rester les mêmes dans toutes la traduction ici.
@@ -64,7 +70,8 @@ Cela devrait être fait dès que possible en repérant les expressions spécifiq
 - technical caveats: limites techniques **TO VALIDATE ** 
 - Epidémiologie 101 : **traduction compréhensible en français**
 - <icon i></icon> Infectious people --> les individus Infectieux <icon i></icon> . Noter l'inversion de l'ordre pour l'image.
-- contact tracing  
+- contact tracing
+- Herd immunity : immunité de groupe
 
 ## Get last update from nicky
 TODO On May 4th: get last updates from nickys project and stop at this version.
