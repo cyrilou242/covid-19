@@ -70,7 +70,7 @@ Cela devrait être fait dès que possible en repérant les expressions spécifiq
 TODO On May 4th: get last updates from nickys project and stop at this version.
 
 ## Traduire /pics
-- retrouver les polices utilisées dans les images (contacter nicky si besoin)
+- retrouver les polices utilisées dans les images (nicky a été contacté, suivre la demande https://github.com/ncase/covid-19/issues/15)
 - rédiger les traductions dans le fichier [pics/PICS_TRANSLATION.md](pics/PICS_TRANSLATION.md), et les valider, avant de les appliquer dans les images 
 
 |   |  Traduit | Relu  | Appliqué à l'image |
