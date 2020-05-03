@@ -5,7 +5,7 @@
         	Ce qui nous attend.
        	</div>
 		<div style="font-weight: 500;top: 140px;left: 10px;font-size: 29px;">
-			Les Futurs du COVID-19, Expliqués par des Simulations Interactives
+			Les futurs du COVID-19, expliqués par des simulations interactives
 		</div>
 		<div style="font-weight: 100;top: 189px;left: 10px;font-size: 19px;line-height: 21px;">
 			<b>
@@ -28,213 +28,213 @@ Bien sûr, on nous rappelle à raison de ne pas se ruer sur le papier toilette. 
 
 Pour être honnête, nous (Marcel - épidémiologiste et Nicky - art/code) sommes inquiets. Tu l'es aussi n'est-ce pas? C'est pourquoi de nos peurs sont nées ces **simulations interactives**, pour que *tu* puisses à ton tour canaliser tes peurs et comprendre:
 
-* **Ces Derniers Mois** (épidémiologie 101, modèle SEIR, R et R<sub>0</sub>)
-* **Les Mois à Venir** (confinement, traçage de contacts, masques)
-* **Les Années à Venir** (perte d'immunité? vaccin introuvable?)
+* **Ces derniers mois** (initiation à l'épidémiologie, modèle SEIR, R et R<sub>0</sub>)
+* **Les mois à venir** (confinement, traçage de contacts, masques)
+* **Les années à venir** (perte d'immunité? vaccin introuvable?)
 
 Ce guide (publié le 1er Mai 2020. clique sur cette note!→[^timestamp]) est censé *et* vous donner de l'espoir, *et* vous faire peur. Pour vaincre le COVID-19 **en préservant aussi nos santés mentals et financières**, nous devons faire preuve d'optimisme pour élaborer des plans, et de pessimisme pour élaborer des plans B. Comme l'a dit un jour Gladys Bronwyn Stern, *“L'optimiste invente l'avion, le pessimiste invente le parachute.”*
 
-[^timestamp]: These footnotes will have sources, links, or bonus commentary. Like this commentary!
+[^timestamp]: Ces notes contiendront des sources, des liens et des commentaires bonus comme celui-ci!
     
-    **Ce guide a été publié le 1er Mai 2020.** De nombreux détails deviendront obsolètes, mais nous sommes convaincus que ce guide couvre 95% des futurs possibles, et que le cours Epidémiologie 101 sera toujours d'une grande utilité.
+    **Ce guide a été publié le 1er Mai 2020.** De nombreux détails deviendront obsolètes, mais nous sommes convaincus que ce guide couvre 95% des futurs possibles, et que notre initiation à l'épidémiologie vous sera bien utile.
 
-Donc accroche-toi: nous entrons dans une zone de turbulence.
+Alors accrochez-vous: nous entrons dans une zone de turbulence.
 
 <div class="section chapter">
     <div>
 		<img src="banners/curve.png" height=480 style="position: absolute;"/>
-        <div>Ces Derniers Mois</div>
+        <div>Ces derniers mois</div>
     </div>
 </div>
 
-Les pilotes utilisent des simulateurs de vols pour apprendre comment ne pas crasher des avions.
+Les pilotes utilisent des simulateurs de vol pour apprendre comment ne pas crasher des avions.
 
 **Les épidémiologistes utilisent des simulateurs d'épidémie pour apprendre comment ne pas crasher l'humanité.**
 
-So, let's make a very, *very* simple "epidemic flight simulator"! In this simulation, <icon i></icon> Infectious people can turn <icon s></icon> Susceptible people into more <icon i></icon> Infectious people:
+Créons notre propre très, *très* simple "simulateur de vol épidémique" ! Dans cette simulation, les individus Infectieux <icon i></icon> peuvent transformer les individus Susceptibles de contracter la maladie <icon s></icon> en encore plus d'individus Infectieux <icon i></icon> :
 
 ![](pics/spread.png)
 
-It's estimated that, *at the start* of a COVID-19 outbreak, the virus jumps from an <icon i></icon> to an <icon s></icon> every 4 days, *on average*.[^serial_interval] (remember, there's a lot of variation)
+On estime *qu'au début* de l'épidémie de COVID-19, le virus allait d'un <icon i></icon> à un <icon s></icon> tous les 4 jours, *en moyenne*.[^serial_interval] (pour rappel, il y a beaucoup de variations)
 
-[^serial_interval]: “The mean [serial] interval was 3.96 days (95% CI 3.53–4.39 days)”. [Du Z, Xu X, Wu Y, Wang L, Cowling BJ, Ancel Meyers L](https://wwwnc.cdc.gov/eid/article/26/6/20-0357_article) (Disclaimer: Early release articles are not considered as final versions)
+[^serial_interval]: “The mean [serial] interval was 3.96 days (95% CI 3.53–4.39 days)”. [Du Z, Xu X, Wu Y, Wang L, Cowling BJ, Ancel Meyers L](https://wwwnc.cdc.gov/eid/article/26/6/20-0357_article) Traduction : "L'intervalle [sériel] moyen était de 3.96 jours (intervalle de confiance à 95% : 3.53–4.39 jours)". (Attention: les pré-publications ne sont pas considérées comme des versions finales)
 
-If we simulate "double every 4 days" *and nothing else*, on a population starting with just 0.001% <icon i></icon>, what happens? 
+Que se passe-t-il si nous simulons le cas "double tous les 4 jours", *et rien de plus*, sur une population qui commence avec seulement 0.001% de <icon i></icon> ? 
 
-**Click "Start" to play the simulation! You can re-play it later with different settings:** (technical caveats: [^caveats])
+**Cliquez sur "Lancer" pour réaliser une simulation! Vous pouvez relancer avec d'autres paramètres quand la simulation est finie:** (limites techniques: [^caveats])
 
-[^caveats]: **Remember: all these simulations are super simplified, for educational purposes.**
+[^caveats]: **Attention: toutes ses simulations sont très simplificatrices, à des fins éducatives.**
     
-    One simplification: When you tell this simulation "Infect 1 new person every X days", it's actually increasing # of infected by 1/X each day. Same for future settings in these simulations – "Recover every X days" is actually reducing # of infected by 1/X each day.
+    Une simplification: Quand la simulation est parametrée pour "Infecter 1 nouvelle personne tous les X jours", elle va en réalité augmenter le nombre d'infectés d'1/X chaque jour. De même pour les prochains paramètres dans ces simulations: "Guérir tous les X jours" est simulé en "réduit le nombre d'infectés d'1/X chaque jour".
     
-    Those *aren't* exactly the same, but it's close enough, and for educational purposes it's less opaque than setting the transmission/recovery rates directly.
+    Ce n'est *pas* exactement la même chose, mais c'est assez proche de la réalité, et plus compréhensible que de paramétrer les taux de transmission/guérison directement.
 
 <div class="sim">
 		<iframe src="sim?stage=epi-1" width="800" height="540"></iframe>
 </div>
 
-This is the **exponential growth curve.** Starts small, then explodes. "Oh it's just a flu" to "Oh right, flus don't create *mass graves in rich cities*". 
+Ceci est la *courbe de croissance exponentielle.** Ça commence petit, puis ça explose. De "Oh ce n'est juste qu'une grippe" à "Ah oui, les grippes n'engendrent pas de *fosses communes dans New-York*". 
 
 ![](pics/exponential.png)
 
-But, this simulation is wrong. Exponential growth, thankfully, can't go on forever. One thing that stops a virus from spreading is if others *already* have the virus:
+Pour autant, cette simulation est fausse. La  croissance exponentielle, heureusement, ne peut pas durer. Si une partie de la population a *déjà*, le virus, cela empêche sa diffusion:
 
 ![](pics/susceptibles.png)
 
-The more <icon i></icon>s there are, the faster <icon s></icon>s become <icon i></icon>s, **but the fewer <icon s></icon>s there are, the *slower* <icon s></icon>s become <icon i></icon>s.**
+Plus il y a de <icon i></icon>, plus les <icon s></icon> deviennent des <icon i></icon> rapidement, **mais moins il y a de <icon s></icon>, *moins* les <icon s></icon>s deviennent des <icon i></icon> rapidement.**
 
-How's this change the growth of an epidemic? Let's find out:
+En quoi cela change la croissance d'une épidémie ? Il n'y a qu'à le simuler:
 
 <div class="sim">
 		<iframe src="sim?stage=epi-2" width="800" height="540"></iframe>
 </div>
 
-This is the "S-shaped" **logistic growth curve.** Starts small, explodes, then slows down again.
+Ceci est la **courbe de croissance logistique** "en S". Ça commence doucement, ça explose, puis ça ralenti à nouveau.
 
-But, this simulation is *still* wrong. We're missing the fact that <icon i></icon> Infectious people eventually stop being infectious, either by 1) recovering, 2) "recovering" with lung damage, or 3) dying.
+Pour autant, cette simulation est *encore* fausse. On passe à côté  du fait qu'un individu Infectieux <icon i></icon> fini par arrêter d'être infectieux, soit en étant: 1) guéri, 2) "guéri" avec des lésions pulmonaires  3) décédé.
 
-For simplicity's sake, let's pretend that all <icon i></icon> Infectious people become <icon r></icon> Recovered. (Just remember that in reality, some are dead.) <icon r></icon>s can't be infected again, and let's pretend – *for now!* – that they stay immune for life.
+Pour faire simple, supposons que tout les individus Infectieux <icon i></icon> deviennent guéris (**R**ecovered en anglais) <icon r></icon>. (Mais gardez en tête que la réalité est bien plus dure.) Les <icon r></icon> ne peuvent plus être infectés, et supposons – *pour l'instant!* – qu'ils sont immunisés à vie.
 
-With COVID-19, it's estimated you're <icon i></icon> Infectious for 10 days, *on average*.[^infectiousness] That means some folks will recover before 10 days, some after. **Here's what that looks like, with a simulation *starting* with 100% <icon i></icon>:**
+Pour le COVID-19, on estime qu'un individu est Infectieux <icon i></icon> pendant 10 jours, *en moyenne*.[^infectiousness] Certains guérissent en moins de 10 jours, d'autres en plus. **Voilà ce que ça donne, avec une simulation qui *commence* avec 100% de <icon i></icon>:**
 
-[^infectiousness]: “The median communicable period \[...\] was 9.5 days.” [Hu, Z., Song, C., Xu, C. et al](https://link.springer.com/article/10.1007/s11427-020-1661-4) Yes, we know "median" is not the same as "average". For simplified educational purposes, close enough.
+[^infectiousness]: “The median communicable period \[...\] was 9.5 days.” [Hu, Z., Song, C., Xu, C. et al](https://link.springer.com/article/10.1007/s11427-020-1661-4) Traduction : "La période de contagiosité médiane \[...\] était de 9.5 jours.". Oui, nous savons qu'une "médiane" n'est pas la même chose qu'une "moyenne". C'est suffisamment proche pour notre explication simplifiée.
 
 <div class="sim">
 		<iframe src="sim?stage=epi-3" width="800" height="540"></iframe>
 </div>
 
-This is the opposite of exponential growth, the **exponential decay curve.**
+Ceci est l'inverse de la croissance exponentielle, c'est la **courbe de décroissance exponentielle.**
 
-Now, what happens if you simulate S-shaped logistic growth *with* recovery?
+Maintenant, que se passe-t-il lorsqu'on simule la courbe de croissance logistique *avec* les guérisons ?
 
 ![](pics/graphs_q.png)
 
-Let's find out.
+Voyons donc ça !
 
-<b style='color:#ff4040'>Red curve</b> is *current* cases <icon i></icon>,    
-<b style='color:#999999'>Gray curve</b> is *total* cases (current + recovered <icon r></icon>),
-starts at just 0.001% <icon i></icon>:
+<b style='color:#ff4040'>La courbe Rouge</b> représente les cas <icon i></icon> *actuels* ,    
+<b style='color:#999999'>La courbe Grise</b> représente le *total* de cas (actuels <icon i></icon> + guéris <icon r></icon>). 
+En commencant avec seulement 0.001% de <icon i></icon>:
 
 <div class="sim">
 		<iframe src="sim?stage=epi-4" width="800" height="540"></iframe>
 </div>
 
-And *that's* where that famous curve comes from! It's not a bell curve, it's not even a "log-normal" curve. It has no name. But you've seen it a zillion times, and beseeched to flatten.
+Et *c'est de là* que nous viens cette fameuse courbe! Ce n'est pas une courbe de Gauss, ni même une courbe "log-normale". Ça n'a pas de nom, mais vous l'avez vue des millions de fois et vous priez pour qu'elle s'aplatisse.
 
-This is the the **SIR Model**,[^sir]    
-(<icon s></icon>**S**usceptible <icon i></icon>**I**nfectious <icon r></icon>**R**ecovered)      
-the *second*-most important idea in Epidemiology 101:
+C'est le **Modèle SIR**, [^sir]    
+(<icon s></icon>**S**usceptible <icon i></icon>**I**nfectieux <icon r></icon>**R**ecovered (guéri en anglais))      
+la *deuxième* idée la plus importante de notre initiation à l'épidémiologie:
 
-[^sir]: For more technical explanations of the SIR Model, see [the Institute for Disease Modeling](https://www.idmod.org/docs/hiv/model-sir.html#) and [Wikipedia](https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology#The_SIR_model)
+[^sir]: Pour plus d'explications techniques sur le modèle SIR, voir [the Institute for Disease Modeling](https://www.idmod.org/docs/hiv/model-sir.html#) et [Wikipedia](https://fr.wikipedia.org/wiki/Mod%C3%A8les_compartimentaux_en_%C3%A9pid%C3%A9miologie)
 
 ![](pics/sir.png)
 
-**NOTE: The simulations that inform policy are way, *way* more sophisticated than this!** But the SIR Model can still explain the same general findings, even if missing the nuances.
+**NB: Les simulations qui conseillent les décideurs politiques sont bien, *bien* plus sophistiquées que ça!** Néanmoins le modèle SIR suffit pour trouver un résultat global similaire, même si certaines nuances lui échappe.
 
-Actually, let's add one more nuance: before an <icon s></icon> becomes an <icon i></icon>, they first become <icon e></icon> Exposed. This is when they have the virus but can't pass it on yet – infect*ed* but not yet infect*ious*.
+Ajoutons donc une autre nuance: avant qu'un <icon s></icon> ne devienne un <icon i></icon>, il doit d'abord être Exposé <icon e></icon>. Cela correspond au moment où l'individu possède le virus mais ne peut pas encore le transmettre – infect**é** mais pas encore infect**ieux**.
 
 ![](pics/seir.png)
 
-(This variant is called the **SEIR Model**[^seir], where the "E" stands for <icon e></icon> "Exposed". Note this *isn't* the everyday meaning of "exposed", when you may or may not have the virus. In this technical definition, "Exposed" means you definitely have it. Science terminology is bad.)
+(Cette variante est appellée le **Modèle SEIR**[^seir], avec "E" pour "Exposé" <icon e></icon>. Notez que *ça ne correspond pas* au sens du mot "exposé" de tous les jours: quand il est possible d'avoir *ou non* le virus. La définition technique d'"Exposé" signifie que le virus est bel et bien porté. La terminologie en science est pleine d'absurdité.)
 
-[^seir]: For more technical explanations of the SEIR Model, see [the Institute for Disease Modeling](https://www.idmod.org/docs/hiv/model-seir.html) and [Wikipedia](https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology#The_SEIR_model)
+[^seir]: Pour plus d'explications techniques sur le modèle SEIR, voir [the Institute for Disease Modeling](https://www.idmod.org/docs/hiv/model-seir.html) et [Wikipedia](https://fr.wikipedia.org/wiki/Mod%C3%A8les_compartimentaux_en_%C3%A9pid%C3%A9miologie)
 
-For COVID-19, it's estimated that you're <icon e></icon> infected-but-not-yet-infectious for 3 days, *on average*.[^latent] What happens if we add that to the simulation?
+Pour le COVID-19, on estime qu'un individu est infecté-mais-pas-encore-infectieux <icon e></icon> pendant 3 jours, *en moyenne*.[^latent] Que se passe-t-il lorsqu'on ajoute cela à la simulation?
 
-[^latent]: “Assuming an incubation period distribution of mean 5.2 days from a separate study of early COVID-19 cases, we inferred that infectiousness started from 2.3 days (95% CI, 0.8–3.0 days) before symptom onset” (translation: Assuming symptoms start at 5 days, infectiousness starts 2 days before = Infectiousness starts at 3 days) [He, X., Lau, E.H.Y., Wu, P. et al.](https://www.nature.com/articles/s41591-020-0869-5)
+[^latent]: “Assuming an incubation period distribution of mean 5.2 days from a separate study of early COVID-19 cases, we inferred that infectiousness started from 2.3 days (95% CI, 0.8–3.0 days) before symptom onset” Traduction : "En supposant que la période d'incubation est en moyenne de 5.2 jours en s'appuyant sur une autre étude des premiers cas de COVID-19, nous en déduisons que la contagiosité commence au bout de 2.3 jours (intervalle de confiance à 95% : 0.8–3.0 jours) avant l'apparition des symptômes". (explication : En supposant que les symptômes commencent au 5ème jour, sachant que le caractère infectieux commence 2 jours avant, on devient infectieux au bout de 3 jours) [He, X., Lau, E.H.Y., Wu, P. et al.](https://www.nature.com/articles/s41591-020-0869-5)
 
-<b style='color:#ff4040'>Red <b style='color:#FF9393'>+ Pink</b> curve</b> is *current* cases (infectious <icon i></icon> + exposed <icon e></icon>),    
-<b style='color:#888'>Gray curve</b> is *total* cases (current + recovered <icon r></icon>):
+<b style='color:#ff4040'>La courbe Rouge <b style='color:#FF9393'>+ Rose</b></b> représente les cas *actuels* (infectieux <icon i></icon> + exposés <icon e></icon>),    
+<b style='color:#888'>La courbe Grise</b> représente le *total* de cas (actuels <icon i></icon> <icon e></icon> + guéris <icon r></icon>):
 
 <div class="sim">
 		<iframe src="sim?stage=epi-5" width="800" height="540"></iframe>
 </div>
 
-Not much changes! How long you stay <icon e></icon> Exposed changes the ratio of <icon e></icon>-to-<icon i></icon>, and *when* current cases peak... but the *height* of that peak, and total cases in the end, stays the same.
+Pas beaucoup de changement! Le temps que l'on passe en Exposé <icon e></icon> change le ratio de <icon e></icon>-pour-<icon i></icon>, et la *date* du pic de cas... mais la *hauteur* du pic, et le nombre total de cas à la fin restent les mêmes.
 
-Why's that? Because of the *first*-most important idea in Epidemiology 101:
+Mais pourquoi ? A cause du *premier* concepte clé de l'épidémiologie:
 
 ![](pics/r.png)
 
-Short for "Reproduction number". It's the *average* number of people an <icon i></icon> infects *before* they recover (or die).
+La version courte du "Nombre de reproduction". Il s'agit du nombre *moyen* de personnes qu'un <icon i></icon> infecte *avant* qu'il ne guérisse (ou décède).
 
 ![](pics/r2.png)
 
-**R** changes over the course of an outbreak, as we get more immunity & interventions.
+**R** évolue au cours d'une vague, au fur et à mesure que l'immunité et les mesures d'intervention se développent.
 
-**R<sub>0</sub>** (pronounced R-nought) is what R is *at the start of an outbreak, before immunity or interventions*. R<sub>0</sub> more closely reflects the power of the virus itself, but it still changes from place to place. For example, R<sub>0</sub> is higher in dense cities than sparse rural areas.
+**R<sub>0</sub>** est la valeur de R *au début de la vague, avant l'immunité et les mesures d'intervention*. R<sub>0</sub> reflète la force du virus-même, mais il varie quand même d'un endroit à l'autre. Par exemple, R<sub>0</sub> est plus grand dans les villes denses qu'en campagne plus espacée.
 
-(Most news articles – and even some research papers! – confuse R and R<sub>0</sub>. Again, science terminology is bad)
+(La plupart des articles d'actualité - et même des publications scientifiques ! - confondent R et R<sub>0</sub>. Encore une fois, la terminologie scientifique est pleine d'absurdité)
 
-The R<sub>0</sub> for "the" seasonal flu is around 1.28[^r0_flu]. This means, at the *start* of a flu outbreak, each <icon i></icon> infects 1.28 others *on average.* (If it sounds weird that this isn't a whole number, remember that the "average" mom has 2.4 children. This doesn't mean there's half-children running about.)
+Le R<sub>0</sub> pour "la" grippe saisonnière tourne autour de 1.28[^r0_flu]. Cela signifie qu'au *début* d'une vague de grippe, chaque <icon i></icon> infecte 1.28 personnes *en moyenne.* (Si ça paraît étrange de ne pas avoir un nombre entier, souvenez-vous que la maman *moyenne* a 2.4 enfants. Cela ne veut pas dire qu'il y a des demi-enfants se gambadant un peu partout.)
 
-[^r0_flu]: “The median R value for seasonal influenza was 1.28 (IQR: 1.19–1.37)” [Biggerstaff, M., Cauchemez, S., Reed, C. et al.](https://bmcinfectdis.biomedcentral.com/articles/10.1186/1471-2334-14-480)
+[^r0_flu]: “The median R value for seasonal influenza was 1.28 (IQR: 1.19–1.37)” [Biggerstaff, M., Cauchemez, S., Reed, C. et al.](https://bmcinfectdis.biomedcentral.com/articles/10.1186/1471-2334-14-480) Traduction: “La valeur médiane de R pour l'influenza saisonnière était de 1.28 (IC: 1.19-1.37)"
 
-The R<sub>0</sub> for COVID-19 is estimated to be around 2.2,[^r0_covid] though one *not-yet-finalized* study estimates it was 5.7(!) in Wuhan.[^r0_wuhan]
+Le R<sub>0</sub> pour le COVID-19 est estimé à environ 2.2[^r0_covid], bien qu'une étude *pas encore finalisée* estime qu'il était de 5.7(!) à Wuhan.[^r0_wuhan]
 
-[^r0_covid]: “We estimated the basic reproduction number R0 of 2019-nCoV to be around 2.2 (90% high density interval: 1.4–3.8)” [Riou J, Althaus CL.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7001239/)
+[^r0_covid]: “We estimated the basic reproduction number R0 of 2019-nCoV to be around 2.2 (90% high density interval: 1.4–3.8)” [Riou J, Althaus CL.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7001239/) Traduction: "Nous avons estimé le nombre de reproduction de base R0 de 2019-nCoV à environ 2.2 (intervalle de confiance à 90%: 1.4-3.8)"
 
-[^r0_wuhan]: “we calculated a median R0 value of 5.7 (95% CI 3.8–8.9)” [Sanche S, Lin YT, Xu C, Romero-Severson E, Hengartner N, Ke R.](https://wwwnc.cdc.gov/eid/article/26/7/20-0282_article)
+[^r0_wuhan]: “we calculated a median R0 value of 5.7 (95% CI 3.8–8.9)” [Sanche S, Lin YT, Xu C, Romero-Severson E, Hengartner N, Ke R.](https://wwwnc.cdc.gov/eid/article/26/7/20-0282_article) Traduction: "Nous avons calculé une valeur médiane de R0 de 5.7 (IC 95% : 3.8-8.9)"
 
-In our simulations – *at the start & on average* – an <icon i></icon> infects someone every 4 days, over 10 days. "4 days" goes into "10 days" two-and-a-half times. This means – *at the start & on average* – each <icon i></icon> infects 2.5 others. Therefore, R<sub>0</sub> = 2.5. (caveats:[^r0_caveats_sim])
+Dans nos simulations - *au début et en moyenne* - un <icon i></icon> infecte quelqu'un tous les 4 jours et ce pendant 10 jours. Il y 2,5 fois "4 jours" dans "10 jours". Cela signifie -*au début et en moyenne* - que chaque <icon i></icon> infecte 2.5 Susceptibles <icon s></icon> . Par conséquent, R<sub>0</sub> = 2,5.(limitations techniques:[^r0_caveats_sim])
 
-[^r0_caveats_sim]: This is pretending that you're equally infectious all throughout your "infectious period". Again, simplifications for educational purposes.
+[^r0_caveats_sim]: Cela suppose qu'on est infectieux de manière constante tout au long de la "période infectieuse". Encore une fois, c'est une simplification pour aider à la compréhension.
 
-**Play with this R<sub>0</sub> calculator, to see how R<sub>0</sub> depends on recovery time & new-infection time:**
+**Jouez avec ce calculateur de R<sub>0</sub> pour voir comment R<sub>0</sub> dépend du temps de guérison et de la fréquence de nouvelle infection:**
 
 <div class="sim">
 		<iframe src="sim?stage=epi-6a&format=calc" width="285" height="255"></iframe>
 </div>
 
-But remember, the fewer <icon s></icon>s there are, the *slower* <icon s></icon>s become <icon i></icon>s. The *current* reproduction number (R) depends not just on the *basic* reproduction number (R<sub>0</sub>), but *also* on how many people are no longer <icon s></icon> Susceptible. (For example, by recovering & getting natural immunity.)
+Mais souvenez-vous, moins il y a de <icon s></icon>, plus les <icon s></icon> deviennent <icon i></icon> *lentement*. Le nombre de reproduction *actuel* (R) dépend non-seulement du nombre de reproduction *de base* (R<sub>0</sub>), mais *aussi* de combien de personnes ne sont plus Susceptibles  <icon s></icon>. (Par exemple, en guérissant et en devenant naturellement immunisées.)
 
 <div class="sim">
 		<iframe src="sim?stage=epi-6b&format=calc" width="285" height="390"></iframe>
 </div>
 
-When enough people have immunity, R < 1, and the virus is contained! This is called **herd immunity**. For flus, herd immunity is achieved *with a vaccine*. Trying to achieve "natural herd immunity" by letting folks get infected is a *terrible* idea. (But not for the reason you may think! We'll explain later.)
+Lorsque suffisament de gens sont immunisés, R < 1 et le virus est contenu ! On appelle ça **l'immunité collective**. Pour la grippe, l'immunité collective est obtenue *par la vaccination*. Essayer d'obtenir "l'immunité collective naturelle" en laissant les gens être infectés est une *très mauvaise* idée. (Mais pas pour la raison que vous avez peut-être en tête ! Nous l'expliquerons plus tard.)
 
-Now, let's play the SEIR Model again, but showing R<sub>0</sub>, R over time, and the herd immunity threshold:
+Maintenant, lançons le modèle SEIR encore une fois, mais en montrant R<sub>0</sub>, l'évolution de R dans le temps et le seuil de l'immunité collective:
 
 <div class="sim">
 		<iframe src="sim?stage=epi-7" width="800" height="540"></iframe>
 </div>
 
-**NOTE: Total cases *does not stop* at herd immunity, but overshoots it!** And it crosses the threshold *exactly* when current cases peak. (This happens no matter how you change the settings – try it for yourself!)
+**Attention: le total des cas ne *s'arrête pas* au seuil de l'immunité collective, mais le dépasse !** Et il passe le seuil *exactement* au moment où le nombre actuel de cas est au maximum. (C'est ainsi quels que soient les réglages - essayez vous-même !)
 
-This is because when there are more non-<icon s></icon>s than the herd immunity threshold, you get R < 1. And when R < 1, new cases stop growing: a peak.
+Cela est dû au fait que lorsqu'il y a plus de non-<icon s></icon> que le seuil d'immunité collective, on obtient R < 1. Et lorsque R < 1, le nombre de nouveaux cas cesse d'augmenter: c'est un pic.
 
-**If there's only one lesson you take away from this guide, here it is** – it's an extremely complex diagram so please take time to fully absorb it:
+**Si vous ne deviez retenir qu'une seule chose de ce guide, ce serait ceci** - c'est un graphique très complexe, alors prenez le temps de l'assimiler complètement:
 
 ![](pics/r3.png)
 
-**This means: we do NOT need to catch all transmissions, or even nearly all transmissions, to stop COVID-19!**
+**Cela signifie qu'il n'y a PAS besoin d'infecter tout le monde, ou même presque tout le monde, pour stopper le COVID-19 !**
 
-It's a paradox. COVID-19 is extremely contagious, yet to contain it, we "only" need to stop more than 60% of infections. 60%?! If that was a school grade, that's a D-. But if R<sub>0</sub> = 2.5, cutting that by 61% gives us R = 0.975, which is R < 1, virus is contained! (exact formula:[^exact_formula])
+C'est paradoxal. Le COVID-19 est extrêmement contagieux et pourtant, pour le contenir, il faut "seulement" éviter plus de 60% des infections. 60% ?! Si c'était une note d'école, ce serait un 12/20. Mais si R<sub>0</sub> = 2.5, alors le réduire de 61% nous donne R = 0.975, ce qui est R < 1, donc le virus est contenu ! (formule exacte:[^exact_formula])
 
-[^exact_formula]: Remember R = R<sub>0</sub> * the ratio of transmissions still allowed. Remember also that ratio of transmissions allowed = 1 - ratio of transmissions *stopped*.
-    
-    Therefore, to get R < 1, you need to get R<sub>0</sub> * TransmissionsAllowed < 1. 
-    
-    Therefore, TransmissionsAllowed < 1/R<sub>0</sub>
-    
-    Therefore, 1 - TransmissionsStopped < 1/R<sub>0</sub>
-    
-    Therefore, TransmissionsStopped > 1 - 1/R<sub>0</sub>
-    
-    Therefore, you need to stop more than **1 - 1/R<sub>0</sub>** of transmissions to get R < 1 and contain the virus!
+[^exact_formula]: Gardez en tête que R = R<sub>0</sub> * le taux des transmissions encore possibles. Souvenez-vous aussi que le taux des transmissions possibles = 1 - le taux des transmissions *empêchées*.
+
+  Donc, pour obtenir R < 1, on a besoin d'avoir R<sub>0</sub> * TransmissionsPermises < 1.
+
+  Donc, TransmissionsPermises < 1/R<sub>0</sub>
+
+  Donc, 1 - TransmissionsEmpêchées < 1/R<sub>0</sub>
+
+  Donc, TransmissionsEmpêchées > 1 - 1/R<sub>0</sub>
+
+  Par conséquent, il faut empêcher plus de **1 - 1/R<sub>0</sub>** des transmissions pour obtenir R < 1 et contenir le virus !
 
 ![](pics/r4.png)
 
-(If you think R<sub>0</sub> or the other numbers in our simulations are too low/high, that's good you're challenging our assumptions! There'll be a "Sandbox Mode" at the end of this guide, where you can plug in your *own* numbers, and simulate what happens.)
+(Si vous pensez que R<sub>0</sub> ou d'autres paramètres dans vos simulations sont trop haut/bas, c'est bien, vous défiez nos hypothèses ! Il y aura un mode "bac à sable" à la fin de ce guide, où vous pourrez entrer vos *propres* paramètres et voir ce que ça donne.)
 
-*Every* COVID-19 intervention you've heard of – handwashing, social/physical distancing, lockdowns, self-isolation, contact tracing & quarantining, face masks, even "herd immunity" – they're *all* doing the same thing:
+*Toutes* les mesures contre le COVID-19 dont vous avez entendu parler - lavage des mains, distance sociale, confinements, auto-isolation, suivi des contacts et mise en quarantaine, port du masque et même "immunité collective" - elles ont toutes le même but:
 
-Getting R < 1.
+Obtenir R < 1.
 
-So now, let's use our "epidemic flight simulator" to figure this out: How can we get R < 1 in a way **that also protects our mental health *and* financial health?**
+Maintenant, utilisons notre "simulateur de vol épidémiologique" pour répondre à la question suivante: Comment peut-on obtenir R < 1 *tout en protégeant notre santé mentale et financière ?**
 
-Brace yourselves for an emergency landing...
+Préparez-vous à un atterrissage d'urgence...
 
 <div class="section chapter">
     <div>
@@ -243,80 +243,80 @@ Brace yourselves for an emergency landing...
     </div>
 </div>
 
-...could have been worse. Here's a parallel universe we avoided:
+... ça aurait pu être pire. Voici un univers parallèle que l'on a évité:
 
-###Scenario 0: Do Absolutely Nothing
+###Scenario 0: On ne fait absolument rien
 
-Around 1 in 20 people infected with COVID-19 need to go to an ICU (Intensive Care Unit).[^icu_covid] In a rich country like the USA, there's 1 ICU bed per 3400 people.[^icu_us] Therefore, the USA can handle 20 out of 3400 people being *simultaneously* infected – or, 0.6% of the population.
+Environ une personne atteinte du COVID-19 sur vingt a besoin de soins intensifs.[^icu_covid] Dans un pays développé comme les États-Unis, il y a une place en soins intensifs par 2400 personnes.[^icu_us] Par conséquent, sur 3400 personnes atteintes *en même temps*, les États-Unis peuvent en gérer 20 - soit 0,6% de la population.
 
-[^icu_covid]: ["Percentage of COVID-19 cases in the United States from February 12 to March 16, 2020 that required intensive care unit (ICU) admission, by age group"](https://www.statista.com/statistics/1105420/covid-icu-admission-rates-us-by-age-group/). Between 4.9% to 11.5% of *all* COVID-19 cases required ICU. Generously picking the lower range, that's 5% or 1 in 20. Note that this total is specific to the US's age structure, and will be higher in countries with older populations, lower in countries with younger populations.
+[^icu_covid]: ["Percentage of COVID-19 cases in the United States from February 12 to March 16, 2020 that required intensive care unit (ICU) admission, by age group"](https://www.statista.com/statistics/1105420/covid-icu-admission-rates-us-by-age-group/).Traduction: "Pourcentage de cas de COVID-19 aux États-Unis du 12 février au 26 mars 2020 nécéssitant une admission en unité de soins intesifs, par groupe d'âge". Entre 4,9% et 11,5% de *tous* les cas de COVID-19 ont eu besoin de soins intensifs. En choisissant généreusement l'estimation basse, cela nous fait 5%, soit 1 sur 20. Notez que cette proportion est propre à la pyramide des âges de ce pays. Elle sera plus haute dans les pays avec une population âgée et plus basse dans les pays avec une population jeune.
 
-[^icu_us]: “Number of ICU beds = 96,596”. From [the Society of Critical Care Medicine](https://sccm.org/Blog/March-2020/United-States-Resource-Availability-for-COVID-19) USA Population was 328,200,000 in 2019. 96,596 out of 328,200,000 = roughly 1 in 3400. 
+[^icu_us]: “Number of ICU beds = 96,596”. De [the Society of Critical Care Medicine](https://sccm.org/Blog/March-2020/United-States-Resource-Availability-for-COVID-19) Tradution: "Nombre de lits en unité de soins intensifs = 96'596" La population des États-Unis était de 328'200'000 en 2019. 96'596 sur 328'200'000 environ 1 sur 3400.
 
-Even if we *more than tripled* that capacity to 2%, here's what would've happened *if we did absolutely nothing:*
+Même si on faisait *plus que tripler* cette capacité pour atteindre 2%, voici ce qui se serait passé *si on n'avait absolument rien fait:*
 
 <div class="sim">
 		<iframe src="sim?stage=int-1&format=lines" width="800" height="540"></iframe>
 </div>
 
-Not good.
+Pas bon.
 
-That's what [the March 16 Imperial College report](http://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-9-impact-of-npis-on-covid-19/) found: do nothing, and we run out of ICUs, with more than 80% of the population getting infected. 
-(remember: total cases *overshoots* herd immunity)
+C'est ce que [Le rapport du 16 mars de l'Imperial College de Londres](http://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-9-impact-of-npis-on-covid-19/) a trouvé: si on ne fait rien, on sature les soins intensifs, avec plus de 80% de la population contaminée.
+(Souvenez-vous: le nombre total de cas *dépasse* le seuil d'immunité collective)
 
-Even if only 0.5% of infected die – a generous assumption when there's no more ICUs – in a large country like the US, with 300 million people, 0.5% of 80% of 300 million = still 1.2 million dead... *IF we did nothing.*
+Même si seulement 0,5% des personnes infectées meurent - une hypothèse optimiste lorsqu'il n'y a plus de place en soins intensifs - dans un grand pays comme les États-Unis avec 300 millions d'habitants, 0,5% de 80% de 300 millions = tout de même 1,2 millions de décès... *SI on ne fait rien.*)
 
-(Lots of news & social media reported "80% will be infected" *without* "IF WE DO NOTHING". Fear was channelled into clicks, not understanding. *Sigh.*)
+(Beaucoup de médias et de réseaux sociaux annonçaient que "80% des gens vont être infectés" *sans* préciser "SI on ne fait rien". La peur a été transformée en clics, pas en compréhension. *Soupir.*)
 
-###Scenario 1: Flatten The Curve / Herd Immunity
+###Scenario 1: Aplatir la courbe / Immunité collective
 
-The "Flatten The Curve" plan was touted by every public health organization, while the United Kingdom's original "herd immunity" plan was universally booed. They were *the same plan.* The UK just communicated theirs poorly.[^yong]
+La stratégie "Aplatir la courbe" a été promue par tous les organismes de santé publique, pendant que le plan de base "d'immunité collective" du Royaume Uni était universellement décrié. Ces deux plans étaient *les mêmes*. Le Royaume Uni a juste mal communiqué le sien.[^yong]
 
 [^yong]: “He says that the actual goal is the same as that of other countries: flatten the curve by staggering the onset of infections. As a consequence, the nation may achieve herd immunity; it’s a side effect, not an aim. [...] The government’s actual coronavirus action plan, available online, doesn’t mention herd immunity at all.”
-    
-    From a [The Atlantic article by Ed Yong](https://www.theatlantic.com/health/archive/2020/03/coronavirus-pandemic-herd-immunity-uk-boris-johnson/608065/)
 
-Both plans, though, had a literally fatal flaw.
+    Tiré de [The Atlantic article by Ed Yong](https://www.theatlantic.com/health/archive/2020/03/coronavirus-pandemic-herd-immunity-uk-boris-johnson/608065/) Traduction: "Il dit que l'objectif est en fait le même que les autres pays: aplatir la courbe en étalant le départ des infections. Par conséquent, le pays pourrait atteindre l'immunité collective; c'est un effet secondaire, pas un but en soi. [...] En fait, le plan d'action du gouvernement contre le coronavirus, disponible en ligne, ne mentionne pas du tout l'immunité collective."
 
-First, let's look at the two main ways to "flatten the curve": handwashing & physical distancing.
+Cependant, les deux plans avaient des failles littéralement fatales.
 
-Increased handwashing cuts flus & colds in high-income countries by ~25%[^handwashing], while the city-wide lockdown in London cut close contacts by ~70%[^london]. So, let's assume handwashing can reduce R by *up to* 25%, and distancing can reduce R by *up to* 70%:
+Premièrement, voyons les deux principales manières "d'aplatir la courbe": le lavage des mains et la distanciation sociale.
 
-[^handwashing]: “All eight eligible studies reported that handwashing lowered risks of respiratory infection, with risk reductions ranging from 6% to 44% [pooled value 24% (95% CI 6–40%)].” We rounded up the pooled value to 25% in these simulations for simplicity. [Rabie, T. and Curtis, V.](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-3156.2006.01568.x) Note: as this meta-analysis points out, the quality of studies for handwashing (at least in high-income countries) are awful.
+Intensifier le lavage des mains réduit les grippes et les rhumes, dans les pays riches, d'environ 25%[^handwashing], tandis que le confinement généralisé a réduit les contacts rapprochés d'environ 70%[^london]. Supposons alors que le lavage des mains peut réduire R *jusqu'à* 25% et que la distanciation sociale peut réduire R *jusqu'à* 70%:
 
-[^london]: “We found a 73% reduction in the average daily number of contacts observed per participant. This would be sufficient to reduce R0 from a value from 2.6 before the lockdown to 0.62 (0.37 - 0.89) during the lockdown”. We rounded it down to 70% in these simulations for simplicity. [Jarvis and Zandvoort et al](https://cmmid.github.io/topics/covid19/comix-impact-of-physical-distance-measures-on-transmission-in-the-UK.html)
+[^handwashing]: “All eight eligible studies reported that handwashing lowered risks of respiratory infection, with risk reductions ranging from 6% to 44% [pooled value 24% (95% CI 6–40%)].”  [Rabie, T. and Curtis, V.](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-3156.2006.01568.x) Traduction: "Toutes les huit études valables ont rapporté que le lavage des mains réduisait le risque d'infections respiratoires, avec une réduction des risque allant de 6% à 44% [valeur moyenne 24% (IC 95% : 6-40%)]." Note: Par simplicité, la valeur a été arrondie à 25% dans les simulations. On notera que, comme le pointe cette méta-analyse, la qualité des études sur le lavage des main (du moins dans les pays riches) est médiocre.
 
-**Play with this calculator to see how % of non-<icon s></icon>, handwashing, and distancing reduce R:** (this calculator visualizes their *relative* effects, which is why increasing one *looks* like it decreases the effect of the others.[^log_caveat])
+[^london]: “We found a 73% reduction in the average daily number of contacts observed per participant. This would be sufficient to reduce R0 from a value from 2.6 before the lockdown to 0.62 (0.37 - 0.89) during the lockdown”.  [Jarvis and Zandvoort et al](https://cmmid.github.io/topics/covid19/comix-impact-of-physical-distance-measures-on-transmission-in-the-UK.html) Traduction: "Nous avons trouvé une réduction de 73% du nombre de contacts journaliers moyen observés par participant. Cela serait suffisant pour réduire R0 de 2,6 avant le confinement à 0,62 (IC 0,37 - 0.89) pendant le confinement". Pour faire simple, le taux a été arrondi à 70% dans les simulations.
 
-[^log_caveat]: This distortion would go away if we plotted R on a logarithmic scale... but then we'd have to explain *logarithmic scales.*
+**Jouez avec ce simulateur pour voir comment le pourcentage de non-<icon s></icon>, le lavage des mains et la distanciation sociale réduisent R:** (ce calculateur visualise leurs effets *relatifs*, ce qui explique pourquoi lorsqu'un l'un d'eux est augmenté, les autres semblent diminuer.[^log_caveat])
+
+[^log_caveat]: Cette distortion disparaîtrait si R était représenté dans une échelle logarithmique... Mais dans ce cas il faudrait aussi expliquer le concept d'*échelle logarithmique.*
 
 <div class="sim">
 		<iframe src="sim?stage=int-2a&format=calc" width="285" height="260"></iframe>
 </div>
 
-Now, let's simulate what happens to a COVID-19 epidemic if, starting March 2020, we had increased handwashing but only *mild* physical distancing – so that R is lower, but still above 1:
+Maintenant, simulons ce qu'il arrive à une épidémie de COVID-19 si, début mars, nous avions augmenté le lavage des mains mais seulement avec une distanciation sociale *légère* - de telle sorte que R est plus bas, mais toujours au dessus de 1:
 
 <div class="sim">
-		<iframe src="sim?stage=int-2&format=lines" width="800" height="540"></iframe>
+   <iframe src="sim?stage=int-2&format=lines" width="800" height="540"></iframe>
 </div>
 
-Three notes:
+Trois observations:
 
-1. This *reduces* total cases! **Even if you don't get R < 1, reducing R still saves lives, by reducing the 'overshoot' above herd immunity.** Lots of folks think "Flatten The Curve" spreads out cases without reducing the total. This is impossible in *any* Epidemiology 101 model. But because the news reported "80%+ will be infected" as inevitable, folks thought total cases will be the same no matter what. *Sigh.*
+1. Cela *réduit* le nombre total de cas ! **Même si on n'arrive pas à R < 1, réduire R sauve quand même des vies en réduisant le dépassement au dessus du seuil d'immunité collective.** Beaucoup de gens s'imaginent "qu'aplatir la courbe" étale les cas sans toutefois réduire leur nombre total. C'est impossible dans *n'importe lequel* des modèles de base de l'épidémiologie. Mais parce que les médias d'actualité présentaient l'affirmation "80% seront infectés" comme inévitable, les gens ont pensé que le nombre total de cas serait le même quoi qu'on fasse. *Soupir.*
 
-2. Due to the extra interventions, current cases peak *before* herd immunity is reached. In fact, in this simulation, total cases only overshoots *a tiny bit* above herd immunity – the UK's plan! At that point, R < 1, you can let go of all other interventions, and COVID-19 stays contained! Well, except for one problem...
+2. A cause des mesures supplémentaires, le nombre de cas actuels atteint un pic *avant* que l'immunité collective ne soit atteinte. En fait, dans cette simulation, le nombre total de cas passe *un tout petit peu* au dessus du seuil d'immunité collective - le plan du Royaume Uni ! A ce moment, R < 1, on peut abandonner toutes les autres mesures d'intervention et le COVID-19 reste contenu ! Eh bien, il y a quand même un problème...
 
-3. You still run out of ICUs. For several months. (and remember, we *already* tripled ICUs for these simulations)
+3. On sature les unités de soins intensifs. Pour plusieurs mois. (et souvenez-vous, on a pourtant *déjà* triplé la capacité pour ces simulations)
 
-That was the other finding of the March 16 Imperial College report, which convinced the UK to abandon its original plan. Any attempt at **mitigation** (reduce R, but R > 1) will fail. The only way out is **suppression** (reduce R so that R < 1).
+C'était l'autre conclusion du rapport du 16 mars de l'Imperial College de Londres, qui a convaincu le Royaume Uni d'abandonner sa stratégie initiale. Toute tentative d'**atténuation** (réduire R, mais R > 1) échouera. Le seul échappatoire est l'**endiguement** (réduire R afin d'atteindre R < 1).
 
 ![](pics/mitigation_vs_suppression.png)
 
-That is, don't merely "flatten" the curve, *crush* the curve. For example, with a...
+Il ne faut donc pas simplement "aplatir" la courbe, il faut la *faire s'écrouler*. Par exemple, par le biais d'un...
 
-###Scenario 2: Months-Long Lockdown
+###Scenario 2: Confinement de plusieurs moins
 
-Let's see what happens if we *crush* the curve with a 5-month lockdown, reduce <icon i></icon> to nearly nothing, then finally – *finally* – return to normal life:
+Voyons ce qu'il arrive lorsqu'on *fait s'écrouler* la courbe avec un confinement de 5 mois, qu'on réduit <icon i></icon> à presque rien, et que finalement, - *finalement* - on retrouve une vie normale:
 
 <div class="sim">
 		<iframe src="sim?stage=int-3&format=lines" width="800" height="540"></iframe>
@@ -324,39 +324,39 @@ Let's see what happens if we *crush* the curve with a 5-month lockdown, reduce <
 
 Oh.
 
-This is the "second wave" everyone's talking about. As soon as we remove the lockdown, we get R > 1 again. So, a single leftover <icon i></icon> (or imported <icon i></icon>) can cause a spike in cases that's almost as bad as if we'd done Scenario 0: Absolutely Nothing.
+Voici la "seconde vague" dont tout le monde parle. Aussitôt le confinement levé, on repasse à R > 1. Un seul <icon i></icon> restant (ou un <icon i></icon> importé) peut provoquer un sursaut presque aussi méchant que si nous avions suivi le Scénario 0: "On ne fait absolument rien".
 
-**A lockdown isn't a cure, it's just a restart.**
+**Un confinement n'est pas un remède, c'est juste un retour à la case départ.**
 
-So, what, do we just lockdown again & again?
+Alors quoi, on se confine encore et toujours ?
 
-###Scenario 3: Intermittent Lockdown
+###Scenario 3: Confinement intermittent
 
-This solution was first suggested by the March 16 Imperial College report, and later again by a Harvard paper.[^lockdown_harvard]
+Cette solution a été suggérée en premier par le rapport du 16 mars de l'Imperial College de Londres et plus tard par un article de Harvard.[^lockdown_harvard]
 
-[^lockdown_harvard]: “Absent other interventions, a key metric for the success of social distancing is whether critical care capacities are exceeded. To avoid this, prolonged or intermittent social distancing may be necessary into 2022.” [Kissler and Tedijanto et al](https://science.sciencemag.org/content/early/2020/04/14/science.abb5793)
+[^lockdown_harvard]: “Absent other interventions, a key metric for the success of social distancing is whether critical care capacities are exceeded. To avoid this, prolonged or intermittent social distancing may be necessary into 2022.” [Kissler and Tedijanto et al](https://science.sciencemag.org/content/early/2020/04/14/science.abb5793) Traduction: Sans autres interventions, un indicateur clé du succès de la distanciation sociale est si oui ou non les soins intensifs sont saturés. Pour éviter cela, une distanciation sociale prolongée ou intermittente pourrait être nécessaire jusqu'en 2022."
 
-**Here's a simulation:** (After playing the "recorded scenario", you can try simulating your *own* lockdown schedule, by changing the sliders *while* the simulation is running! Remember you can pause & continue the sim, and change the simulation speed)
+**Voici une simulation:** (Après avoir lancé le scénario "pré-enregistré", vous pourrez essayer de simuler votre *propre* plan confinement, en déplaçant les curseurs *pendant* que la simulation tourne ! Gardez en tête que vous pouvez mettre en pause et reprendre la simulation, ainsi que changer la vitesse de la simulation)
 
 <div class="sim">
 		<iframe src="sim?stage=int-4&format=lines" width="800" height="540"></iframe>
 </div>
 
-This *would* keep cases below ICU capacity! And it's *much* better than an 18-month lockdown until a vaccine is available. We just need to... shut down for a few months, open up for a few months, and repeat until a vaccine is available. (And if there's no vaccine, repeat until herd immunity is reached... in 2022.)
+Cela *pourrait* maintenir le nombre de cas en dessous de la capacité des soins intensifs! Et c'est *beaucoup* mieux qu'un confinement de 18 mois en attendant qu'un vaccin soit disponible. Il faut juste... tout fermer pendant quelques mois, rouvrir pendant quelques mois et répéter jusqu'à ce qu'un vaccin arrive. (Et s'il n'y a pas de vaccin, répéter jusqu'à ce que l'immunité collective soit atteinte... en 2022.)
 
-Look, it's nice to draw a line saying "ICU capacity", but there's lots of important things we *can't* simulate here. Like:
+Enfin bon, c'est bien joli de dessiner une ligne disant "capacité des soins intensifs", mais il a beaucoup de choses importantes qu'on *ne peut pas* simuler ici. Comme:
 
-**Mental Health:** Loneliness is one of the biggest risk factors for depression, anxiety, and suicide. And it's as associated with an early death as smoking 15 cigarettes a day.[^loneliness]
+**La santé mentale:** La solitude est un des plus importants facteurs de risque menant à la dépression, à l'anxiété et au suicide. C'est tout aussi associé à une mort prématurée que ne l'est le fait de fumer 15 cigarettes par jour.[^loneliness]
 
-[^loneliness]: See [Figure 6 from Holt-Lunstad & Smith 2010](https://journals.sagepub.com/doi/abs/10.1177/1745691614568352). Of course, big disclaimer that they found a *correlation*. But unless you want to try randomly assigning people to be lonely for life, observational evidence is all you're gonna get.
+[^loneliness]: Voir la [Figure 6 de Holt-Lunstad & Smith 2010](https://journals.sagepub.com/doi/abs/10.1177/1745691614568352). Bien sûr, grosse mise en garde: ils ont trouvé une *correlation*. Mais à moins que vous ne vouliez imposer aléatoirement à des gens d'être solitaires pour toute leur vie, des indices observationnels sont tout ce que vous pourrez avoir.
 
-**Financial Health:** "What about the economy" sounds like you care more about dollars than lives, but "the economy" isn't just stocks: it's people's ability to provide food & shelter for their loved ones, to invest in their kids' futures, and enjoy arts, foods, videogames – the stuff makes life worth living. And besides, poverty *itself* has horrible impacts on mental and physical health.
+**Santé financière:** "Et l'économie alors" sonne comme si vous vous préoccupiez plus de dollars que de vies à sauver, mais "l'économie" n'est pas seulement des actions en bourse : c'est la capacité des personnes à fournir un toit et de la nourriture à leurs proches, à investir dans le futur de leurs enfants, à apprécier de l'art, de la bonne nourriture, des jeux vidéos - les trucs qui font que la vie vaut la peine d'être vécue. Par ailleurs, la pauvreté *elle-même* a un impact désastreux sur la santé mentale et physique.
 
-Not saying we *shouldn't* lock down again! We'll look at "circuit breaker" lockdowns later. Still, it's not ideal.
+Nous ne disons pas qu'on ne *devrait pas* se confiner à nouveau ! Nous verrons les confinements "disjoncteurs" plus tard. Toujours est-il que ce n'est pas idéal.
 
-But wait... haven't Taiwan and South Korea *already* contained COVID-19? For 4 whole months, *without* long-term lockdowns?
+Mais attendez... Taïwan et la Corée du Sud n'ont-elles pas *déjà* contenu le COVID-19 ? Pendant 4 mois, *sans* long confinement ?
 
-How?
+Comment ?
 
 ###Scenario 4: Test, Trace, Isolate
 
@@ -570,58 +570,59 @@ Sure, you may have dried-out hands. But you'll get to invite a date out to a com
 
 Even under the worst-case scenario... life perseveres.
 
-So now, let's plan for some *worse* worst-case scenarios. Water landing, get your life jacket, and please follow the lights to the emergency exits:
+Alors maintenant, faisons des plans pour quelques scénarios catastrophes. Amérissage, attrapez votre gilet de sauvetage et suivez les lumières vers les sorties de secours:
 
 <div class="section chapter">
     <div>
 		<img src="banners/curve.png" height=480 style="position: absolute;"/>
-        <div>The Next Few Years</div>
+        <div>Les années à venir</div>
     </div>
 </div>
 
-You get COVID-19, and recover. Or you get the COVID-19 vaccine. Either way, you're now immune...
+Vous attrapez le COVID-19 et en guérissez. Ou vous recevez un vaccin. Dans les deux cas, vous êtes maintenant immunisé·e...
 
-...*for how long?*
+...*mais pour combien de temps?*
 
-* COVID-19 is most closely related to SARS, which gave its survivors 2 years of immunity.[^SARS immunity]
-* The coronaviruses that cause "the" common cold give you 8 months of immunity.[^cold immunity]
-* There's reports of folks recovering from COVID-19, then testing positive again, but it's unclear if these are false positives.[^unclear]
-* One *not-yet-peer-reviewed* study on monkeys showed immunity to the COVID-19 coronavirus for at least 28 days.[^monkeys]
+* Le COVID-19 est étroitement lié au SARS, qui rend ses survivants immunisés pour deux ans.[^SARS immunity]
+* Le coronavirus causant "le" rhume procure 8 mois d'immunité.[^cold immunity]
+* On a rapporté des cas de guéris du COVID-19 qui ont été, plus tard, à nouveau testés positivement, mais ce n'est pas clair ces cas sont des faux positifs.[^unclear]
+* Une étude *pas encore revue par les pairs* effectuée sur des singes suggère que l'immunité au coronavirus du COVID-19 durerait au moins 28 jours.[^monkeys]
 
-But for COVID-19 *in humans*, as of May 1st 2020, "how long" is the big unknown.
+Mais pour le COVID-19 *chez les humains*, au 1er mai 2020, "Pour combien de temps" est encore une grande inconnue.
 
-[^SARS immunity]: “SARS-specific antibodies were maintained for an average of 2 years [...] Thus, SARS patients might be susceptible to reinfection ≥3 years after initial exposure.” [Wu LP, Wang NC, Chang YH, et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2851497/) "Sadly" we'll never know how long SARS immunity would have really lasted, since we eradicated it so quickly.
+[^SARS immunity]: “SARS-specific antibodies were maintained for an average of 2 years [...] Thus, SARS patients might be susceptible to reinfection ≥3 years after initial exposure.” [Wu LP, Wang NC, Chang YH, et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2851497/) Traduction: "Les anticorps spécifiques au SARS sont maintenus en moyenne 2 ans [...] En conséquence, les patients du SARS pourraient être susceptibles d'être réinfectés ≥3 ans après l'exposition initiale. "Malheureusement", on ne saura jamais combien de temps l'immunité au SARS dure réellement, puisqu'il a été éradiqué très rapidement.
 
-[^cold immunity]: “We found no significant difference between the probability of testing positive at least once and the probability of a recurrence for the beta-coronaviruses HKU1 and OC43 at 34 weeks after enrollment/first infection.” [Marta Galanti & Jeffrey Shaman (PDF)](http://www.columbia.edu/~jls106/galanti_shaman_ms_supp.pdf)
+[^cold immunity]: “We found no significant difference between the probability of testing positive at least once and the probability of a recurrence for the beta-coronaviruses HKU1 and OC43 at 34 weeks after enrollment/first infection.” [Marta Galanti & Jeffrey Shaman (PDF)](http://www.columbia.edu/~jls106/galanti_shaman_ms_supp.pdf) Traduction: "Nous n'avons trouvé aucune différence significative entre la probabilité d'être testé positif au moins une fois et la probabilité d'une récurrence du beta-corronavirus HKU1 et OC43 34 semaines après l'exposition/la première infection."
 
-[^unclear]: “Once a person fights off a virus, viral particles tend to linger for some time. These cannot cause infections, but they can trigger a positive test.” [from STAT News by Andrew Joseph](https://www.statnews.com/2020/04/20/everything-we-know-about-coronavirus-immunity-and-antibodies-and-plenty-we-still-dont/)
+[^unclear]: “Once a person fights off a virus, viral particles tend to linger for some time. These cannot cause infections, but they can trigger a positive test.” [from STAT News by Andrew Joseph](https://www.statnews.com/2020/04/20/everything-we-know-about-coronavirus-immunity-and-antibodies-and-plenty-we-still-dont/) Traduction: "Une fois qu'une personne combat un virus, des particules virales tendent à subsister quelques temps. Cela ne peut causer une infection, mais cela peut provoquer un test positif."
 
-[^monkeys]: From [Bao et al.](https://www.biorxiv.org/content/10.1101/2020.03.13.990226v1.abstract) *Disclaimer: This article is a preprint and has not been certified by peer review (yet).* Also, to emphasize: they only tested re-infection 28 days later. 
+[^monkeys]: De [Bao et al.](https://www.biorxiv.org/content/10.1101/2020.03.13.990226v1.abstract) *Attention: Cet article est une pré-publication et n'a pas (encore) été vérifiée par une relecture par les pairs.* Aussi, pour le souligner: ils ont seulement testé la ré-infection 28 jours plus tard.
 
-For these simulations, let's say it's 1 year.
-**Here's a simulation starting with 100% <icon r></icon>**, exponentially decaying into susceptible, no-immunity <icon s></icon>s after 1 year, on *average*, with variation:
+Pour ces simulations, disons que c'est un an.
+**Voici une simulation commençant avec 100% de <icon r></icon>**, décroissant exponentiellement vers les Susceptibles et non-immunisés, <icon s></icon> après un an en *moyenne*, avec des variations:
+
 
 <div class="sim">
 		<iframe src="sim?stage=yrs-1&format=lines&height=600" width="800" height="600"></iframe>
 </div>
 
-Return of the exponential decay!
+Le retour du déclin exponentiel !
 
-This is the **SEIRS Model**. The final "S" stands for <icon s></icon> Susceptible, again.
+Il s'agit du **Modèle SEIRS**. Le dernier "S" signifie Susceptible <icon s></icon>, encore une fois.
 
 ![](pics/seirs.png)
 
-Now, let's simulate a COVID-19 outbreak, over 10 years, with no interventions... *if immunity only lasts a year:*
+Maintenant, simulons une vague de COVID-19 sur 10 ans, sans intervention... *si l'immunité ne dure qu'un an:*
 
 <div class="sim">
 		<iframe src="sim?stage=yrs-2&format=lines&height=600" width="800" height="600"></iframe>
 </div>
 
-In previous simulations, we only had *one* ICU-overwhelming spike. Now, we have several, *and* <icon i></icon> cases come to a rest *permanently at* ICU capacity. (Which, remember, we *tripled* for these simulations)
+Dans les simulations précédentes, nous avions seulement *un* pic dépassant la capacité en respirateurs. Maintenant, nous en avons plusieurs, *et* les cas <icon i></icon> atteignent un équilibre *permanent* égale à la capacité en respirateurs. (Que nous avons triplé pour ces simulations, souvenez-vous)
 
-R = 1, it's **endemic.**
+R = 1, c'est une **endémie.**
 
-Thankfully, because summer reduces R, it'll make the situation better:
+Heureusement, comme l'été réduit R, la situation va s'améliorer:
 
 <div class="sim">
 		<iframe src="sim?stage=yrs-3&format=lines&height=640" width="800" height="640"></iframe>
@@ -629,57 +630,58 @@ Thankfully, because summer reduces R, it'll make the situation better:
 
 Oh.
 
-Counterintuitively, summer makes the spikes worse *and* regular! This is because summer reduces new <icon i></icon>s, but that in turn reduces new immune <icon r></icon>s. Which means immunity plummets in the summer, *creating* large regular spikes in the winter.
+contre toute attente, l'été rend les pics plus sévères *et* plus réguliers ! C'est parce que l'été réduit les nouveaux <icon i></icon>, mais en même temps réduit aussi les nouveaux immunisés <icon r></icon>. Ce qui veut dire que l'immunité chute durant l'été, *causant* des pics prononcés et réguliers en hiver.
 
-Thankfully, the solution to this is pretty straightforward – just vaccinate people every fall/winter, like we do with flu shots:
+Heureusement, la solution à ce problème est simple - vacciner les gens chaque automne/hiver, à la manière de ce que l'on fait avec le vaccin de la grippe.
 
-**(After playing the recording, try simulating your own vaccination campaigns! Remember you can pause/continue the sim at any time)**
+**(Après avoir lancé l'enregistrement, essayez de simuler vos propres campagnes de vaccination ! Souvenez-vous que vous pouvez mettre en pause et continuer la simulation n'importe quand)**
 
 <div class="sim">
 		<iframe src="sim?stage=yrs-4&format=lines" width="800" height="540"></iframe>
 </div>
 
-But here's the scarier question:
+Mais voici venue la question qui fait peur:
 
-What if there's no vaccine for *years*? Or *ever?*
+Et s'il n'y a pas de vaccin avant *plusieurs années* ? Voire *jamais* ?
 
-**To be clear: this is unlikely.** Most epidemiologists expect a vaccine in 1 to 2 years. Sure, there's never been a vaccine for any of the other coronaviruses before, but that's because SARS was eradicated quickly, and "the" common cold wasn't worth the investment. 
+**Pour être clair: c'est improbable.** La plupart des épidémiologistes s'attendent à un vaccin d'ici un ou deux ans. Alors oui, il n'y a jamais eu de vaccin pour aucun des autres coronavirus dans le passé, mais c'est parce que le SARS a été rapidement éradiqué et que "le" rhume n'en valait pas la peine.
 
-Still, infectious disease researchers have expressed worries: What if we can't make enough?[^vax_enough] What if we rush it, and it's not safe?[^vax_safe]
+Mais quand même, des chercheurs des maladies infectieuses ont exprimé des inquiétudes: Et si on ne pouvait en fabriquer assez ?[^vax_enough] Et si il arrivait bâclé et qu'il n'était pas sûr ?[^vax_safe]
 
-[^vax_enough]: “If a coronavirus vaccine arrives, can the world make enough?” [by Roxanne Khamsi, on Nature](https://www.nature.com/articles/d41586-020-01063-8)
+[^vax_enough]: “If a coronavirus vaccine arrives, can the world make enough?” [by Roxanne Khamsi, on Nature](https://www.nature.com/articles/d41586-020-01063-8) Traduction: "Si un vaccin de coronavirus arrive, le monde peut-il en produire assez ?"
 
-[^vax_safe]: “Don’t rush to deploy COVID-19 vaccines and drugs without sufficient safety guarantees” [by Shibo Jiang, on Nature](https://www.nature.com/articles/d41586-020-00751-9)
+[^vax_safe]: “Don’t rush to deploy COVID-19 vaccines and drugs without sufficient safety guarantees” [by Shibo Jiang, on Nature](https://www.nature.com/articles/d41586-020-00751-9) Traduction: "Ne bâclez pas le deployement de médicaments et de vaccins du COVID-19 sans garanties de sécurité suffisantes"
 
-Even in the nightmare "no-vaccine" scenario, we still have 3 ways out. From most to least terrible:
+Même dans le scénario catastrophe "sans vaccin", nous avons 3 échappatoires. Du plus au moins terrible:
 
-1) Do intermittent or loose R < 1 interventions, to reach "natural herd immunity". (Warning: this will result in many deaths & damaged lungs. *And* won't work if immunity doesn't last.)
+1) Intervenir temporairement ou modérément pour garantir R<1 dans le but d'atteindre "l'immunité collective naturelle". (Attention: cela va provoquer de nombreuses morts et séquelles pulmonaires. *Et* ça ne fonctionne pas si l'immunité ne dure pas.)
 
-2) Do the R < 1 interventions forever. Contact tracing & wearing masks just becomes a new norm in the post-COVID-19 world, like how STI tests & wearing condoms became a new norm in the post-HIV world.
+2) Intevenir de manière permanente pour maintenir R<1. Les suivis des contacts et le port du masque deviennent alors la nouvelle norme du monde post-COVID-19, tout comme les tests de MST et le port du préservatif sont devenus la nouvelle norme dans le monde post-VIH.
 
-3) Do the R < 1 interventions until we develop treatments that make COVID-19 way, way less likely to need critical care. (Which we should be doing *anyway!*) Reducing ICU use by 10x is the same as increasing our ICU capacity by 10x:
+3) Intervenir pour maintenir R<1 jusqu'à que soient développés des traitements qui rendent le COVID-19 bien, bien moins probable de demander des soins critiques. (Ce qu'on devrait faire de *toute façon !*) Diviser le besoin de respirateur par 10 est équivalent à multiplier la capacité en respirateurs par 10:
 
-**Here's a simulation of *no* lasting immunity, *no* vaccine, and not even any interventions – just slowly increasing capacity to survive the long-term spikes:**
+**Voici une simulation *sans* immunité durable, *sans* vaccin et sans même aucune intervention - seule la capacité à survivre aux longs pics augmente lentement*:**
 
 <div class="sim">
 		<iframe src="sim?stage=yrs-5&format=lines" width="800" height="540"></iframe>
 </div>
 
-Even under the *worst* worst-case scenario... life perseveres.
+Même dans le *pire* des scénarios cauchemardesques... La vie continue.
 
 . . .
 
-Maybe you'd like to challenge our assumptions, and try different R<sub>0</sub>'s or numbers. Or try simulating your *own* combination of intervention plans!
 
-**Here's an (optional) Sandbox Mode, with *everything* available. (scroll to see all controls) Simulate & play around to your heart's content:**
+Vous voudrez peut-être remettre en question nos hypothèses et essayer différents R<sub>0</sub> ou nombres. Ou même essayer de simuler vos *propres* combinaisons de plans d'intervention !
+
+**Voici un mode (optionel) "bac à sable", où *tout* est disponible. (Fais défiler pour voir tous les contrôles.) Simule et joue autant que le coeur t'en dit:**
 
 <div class="sim">
 		<iframe src="sim?stage=SB&format=sb" width="800" height="540"></iframe>
 </div>
 
-This basic "epidemic flight simulator" has taught us so much. It's let us answer questions about the past few months, next few months, and next few years.
+Ce "simulateur de vol épidémiologique" nous a tant appris. Il nous a permis de répondre à des questions sur les derniers mois, sur ceux à venir et sur les prochaines années.
 
-So finally, let's return to...
+Finalement, retournons à la...
 
 <div class="section chapter">
     <div>
@@ -688,24 +690,24 @@ So finally, let's return to...
     </div>
 </div>
 
-Plane's sunk. We've scrambled onto the life rafts. It's time to find dry land.[^dry_land]
+L'avion a coulé. Nous nous sommes précipités sur des canots de sauvetages. C'est le moment de trouver la terre ferme.[^dry_land]
 
-[^dry_land]: Dry land metaphor [from Marc Lipsitch & Yonatan Grad, on STAT News](https://www.statnews.com/2020/04/01/navigating-covid-19-pandemic/)
+[^dry_land]: La métaphore de la terre ferme [de Marc Lipsitch & Yonatan Grad, sur STAT News](https://www.statnews.com/2020/04/01/navigating-covid-19-pandemic/)
 
-Teams of epidemiologists and policymakers ([left](https://www.americanprogress.org/issues/healthcare/news/2020/04/03/482613/national-state-plan-end-coronavirus-crisis/), [right](https://www.aei.org/research-products/report/national-coronavirus-response-a-road-map-to-reopening/ ), and [multi-partisan](https://ethics.harvard.edu/covid-roadmap)) have come to a consensus on how to beat COVID-19, while protecting our lives *and* liberties.
+Des équipes d'épidémiologistes et de décideurs ([de gauche](https://www.americanprogress.org/issues/healthcare/news/2020/04/03/482613/national-state-plan-end-coronavirus-crisis/), [de droite](https://www.aei.org/research-products/report/national-coronavirus-response-a-road-map-to-reopening/ ), et [multi-partisanes](https://ethics.harvard.edu/covid-roadmap)) sont arrivées à un consensus sur la manière de battre le COVID-19, tout en protégeant nos vies *et* nos libertés.
 
-Here's the rough idea, with some (less-consensus) backup plans:
+Voilà grossièrement l'idée, avec quelques plans de rechange (moins consensuels):
 
 ![](pics/plan.png)
 
-So what does this mean for YOU, right now?
+Qu'est ce que ça veut dire pour vous maintenant ?
 
-**For everyone:** Respect the lockdown so we can get out of Phase I asap. Keep washing those hands. Make your own masks. Download a *privacy-protecting* contact tracing app when those are available next month. Stay healthy, physically & mentally! And write your local policymaker to get off their butt and...
+**Pour tout le monde:** Respectez le confinement pour qu'on puisse sortir de la Phase I aussi vite que possible. Lavez-vous les mains. Fabriquez vos propres masques. Téléchargez une application de suivi des contacts *respectueuse de vos données personnelles* lorsqu'elles seront disponibles le mois prochain. Restez en forme, physiquement et mentalement ! Et écrivez à votre décideur local de bouger ses fesses et...
 
-**For policymakers:** Make laws to support folks who have to self-isolate/quarantine. Hire more manual contact tracers, *supported* by privacy-protecting contact tracing apps. Direct more funds into the stuff we should be building, like...
+**Pour les décideurs:** Faites des lois qui supportent ceux qui doivent se mettre en auto-isolement/quarantaine. Engagez plus d'agents de suivi manuel des contacts, *supportés** par des applications de suivi des contacts qui respectent la vie privée. Dirigez plus de fonds vers les trucs qu'on devrait fabriquer, comme...
 
-**For builders:** Build tests. Build ventilators. Build personal protective equipment for hospitals. Build tests. Build masks. Build apps. Build antivirals, prophylactics, and other treatments that aren't vaccines. Build vaccines. Build tests. Build tests. Build tests. Build hope. 
+**Pour les fabriquants:** Fabriquez des tests. Fabriquez des respirateurs. Fabriquez de l'équipement de protection personnel pour les hôpitaux. Fabriquez des tests. Fabriquez des masques. Fabriquez des applications. Fabriquez des antiviraux, des prophylactiques et autres traitements qui ne sont pas vaccins. Fabriquez des vaccins. Fabriquez des tests. Fabriquez des tests. Fabriquez de l'espoir.
 
-Don't downplay fear to build up hope. Our fear should *team up* with our hope, like the inventors of airplanes & parachutes. Preparing for horrible futures is how we *create* a hopeful future.
+Ne minimisez pas la peur pour fabriquer de l'espoir. Notre peur devrait faire *équipe* avec notre espoir, comme les inventeurs de l'avions et du parachute. C'est en se préparant à des futurs épouvantables qu'on *crée* un futur plein d'espérance.
 
-The only thing to fear is the idea that the only thing to fear is fear itself.
+La seule chose à craindre est l'idée que la seule chose dont il faille avoir peur est la peur elle-même.
