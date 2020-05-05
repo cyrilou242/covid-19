@@ -358,117 +358,117 @@ But wait... haven't Taiwan and South Korea *already* contained COVID-19? For 4 w
 
 How?
 
-###Scenario 4: Test, Trace, Isolate
+###Scénario 4 : Tester, Traceer, Isoler
 
-*"Sure, we \*could've\* done what Taiwan & South Korea did at the start, but it's too late now. We missed the start."*
+*« Bien sûr, on \*pourrait\* avoir fait comme Taiwan et la Corée du Sud ont fait au début, mais c'est désormais trop tard. On a loupé le départ. »*
 
-But that's exactly it! “A lockdown isn't a cure, it's just a restart”... **and a fresh start is what we need.**
+Mais c'est justement ça ! « Un confinement n'est pas un remède, c'est juste un redémarrage »… **et c'est exactement d'un nouveau départ dont nous avons besoin.**
 
-To understand how Taiwan & South Korea contained COVID-19, we need to understand the exact timeline of a typical COVID-19 infection[^timeline]:
+Pour comprendre comment Taiwen et la Corée du Sud ont contenu le Covid-19, nous devons comprendre le déroulement précis d'une infection typique au Covid-19[^timeline] :
 
-[^timeline]: **3 days on average to infectiousness:** “Assuming an incubation period distribution of mean 5.2 days from a separate study of early COVID-19 cases, we inferred that infectiousness started from 2.3 days (95% CI, 0.8–3.0 days) before symptom onset” (translation: Assuming symptoms start at 5 days, infectiousness starts 2 days before = Infectiousness starts at 3 days) [He, X., Lau, E.H.Y., Wu, P. et al.](https://www.nature.com/articles/s41591-020-0869-5)  
+[^timeline]: **3 jours en moyenne jusqu'à l'infectiosité :** « En présumant une distribution de la période d'incubation avec une moyenne de 5,2 jours grâce à une autre étude des premiers cas de Covid-19, nous avons déduit que l'infectiosité démarrait 2,3 jours (IC 95%, 0,8–3,0 jours) avant l'apparition des symptômes » (traduction : En présumant que les symptômes démarrent à 5 jours, l'infectiosité démarre 2 jours plus tôt = l'nfectiosité démarre à 3 jours) [He, X., Lau, E.H.Y., Wu, P. et al.](https://www.nature.com/articles/s41591-020-0869-5)  
     
-    **4 days on average to infecting someone else:** “The mean [serial] interval was 3.96 days (95% CI 3.53–4.39 days)” [Du Z, Xu X, Wu Y, Wang L, Cowling BJ, Ancel Meyers L](https://wwwnc.cdc.gov/eid/article/26/6/20-0357_article)
+	**4 jours en moyenne pour infecter quelqu'un d'autre :** « L'intervalle moyen [en série] était de 3,96 jours (IC 95% 3,53–4,39 jours) » [Du Z, Xu X, Wu Y, Wang L, Cowling BJ, Ancel Meyers L](https://wwwnc.cdc.gov/eid/article/26/6/20-0357_article)
     
-    **5 days on average to feeling symptoms:** “The median incubation period was estimated to be 5.1 days (95% CI, 4.5 to 5.8 days)” [Lauer SA, Grantz KH, Bi Q, et al](https://annals.org/AIM/FULLARTICLE/2762808/INCUBATION-PERIOD-CORONAVIRUS-DISEASE-2019-COVID-19-FROM-PUBLICLY-REPORTED)
+	**5 jours en moyenne pour ressentir des sypmtômes :** « La période d'incubation moyenne a été estimée à 5,1 jours (IC 95%, 4,5 à 5,8 jours) » [Lauer SA, Grantz KH, Bi Q, et al](https://annals.org/AIM/FULLARTICLE/2762808/INCUBATION-PERIOD-CORONAVIRUS-DISEASE-2019-COVID-19-FROM-PUBLICLY-REPORTED)
 
 ![](pics/timeline1.png)
 
-If cases only self-isolate when they know they're sick (that is, they feel symptoms), the virus can still spread:
+Si les cas s'auto-isolent seulement quand ils savent qu'ils sont malades (c'est-à-dire quand ils ressentent des symptômes), le virus peut encore se répandre :
 
 ![](pics/timeline2.png)
 
-And in fact, 44% of all transmissions are like this: *pre*-symptomatic! [^pre_symp]
+Et en fait, 44% de toutes les transmissions se font de cette façon: *pré*-symptomatique ! [^pre_symp]
 
-[^pre_symp]: “We estimated that 44% (95% confidence interval, 25–69%) of secondary cases were infected during the index cases’ presymptomatic stage” [He, X., Lau, E.H.Y., Wu, P. et al](https://www.nature.com/articles/s41591-020-0869-5)
+[^pre_symp]: « Nous avons estimé que 44% (intervall de confiance de 95%, 25–69%) des cas secondaires avaient été infectés pendant l'étape présymptomatique des cas index » [He, X., Lau, E.H.Y., Wu, P. et al](https://www.nature.com/articles/s41591-020-0869-5)
 
-But, if we find *and quarantine* a symptomatic case's recent close contacts... we stop the spread, by staying one step ahead!
+Mais, si nous trouvons *et mettons en quarantaine* les contacts récents d'un cas symptomatique… on arrête la propagation, en ayant toujours un coup d'avance !
 
 ![](pics/timeline3.png)
 
-This is called **contact tracing**. It's an old idea, was used at an unprecedented scale to contain Ebola[^ebola], and now it's core part of how Taiwan & South Korea are containing COVID-19!
+C'est ce qu'on appelle le **traçage des contacts**. C'est une vieille idée, elle a été utilisée à une échelle sans précédent pour contenir Ebola[^ebola], and maintenant elle est une partie centrale de comment Taiwan et la Corée du Sud contiennent le Covdi-19 !
 
-[^ebola]: “Contact tracing was a critical intervention in Liberia and represented one of the largest contact tracing efforts during an epidemic in history.” [Swanson KC, Altare C, Wesseh CS, et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6152989/)
+[^ebola]: « Le traçage des contacts a été une intervention critique au Liberia et a représenté un des plus grands efforts de traçage de contacts de l'histoire. » [Swanson KC, Altare C, Wesseh CS, et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6152989/)
 
-(It also lets us use our limited tests more efficiently, to find pre-symptomatic <icon i></icon>s without needing to test almost everyone.)
+(Il nous permet aussi d'utiliser nos tests limités plus efficacement, pour trouver les <icon i></icon>s pré-symptomatiques sans avoir besoin de tester tout le monde.)
 
-Traditionally, contacts are found with in-person interviews, but those *alone* are too slow for COVID-19's ~48 hour window. That's why contact tracers need help, and be supported by – *NOT* replaced by – contact tracing apps.
+Traditionnellement, les contacts sont trouvés grâce à des entretiens physiques, mais à eux *seuls*, ils sont trop lents pour la fenêtre d'environ 48 heures du Covid-19. C'est pourquoi les traceurs de contacts ont besoin d'aide, et sont aidés par — *PAS* remplacés par — des applis de traçage de contacts.
 
-(This idea didn't come from "techies": using an app to fight COVID-19 was first proposed by [a team of Oxford epidemiologists](https://science.sciencemag.org/content/early/2020/04/09/science.abb6936).)
+(Cette idée n'est pas venus des « techos » : utiliser une appli pour combattre le Covid-19 a été proposé en premier par [une équipe d'épidémiologistes d'Oxford](https://science.sciencemag.org/content/early/2020/04/09/science.abb6936).)
 
-Wait, apps that trace who you've been in contact with?... Does that mean giving up privacy, giving in to Big Brother?
+Attendez, des applis qui tracent avec qui vous avez été en contact ?… Est-ce que ça veut dire abandonner toute confidentialité, céder à Big Brother ?
 
-Heck no! **[DP-3T](https://github.com/DP-3T/documents#decentralized-privacy-preserving-proximity-tracing)**, a team of epidemiologists & cryptographers (including one of us, Marcel Salathé) is *already* making a contact tracing app – with code available to the public – that reveals **no info about your identity, location, who your contacts are, or even *how many contacts* you've had.**
+Sûrement pas ! **[DP-3T](https://github.com/DP-3T/documents#decentralized-privacy-preserving-proximity-tracing)**, une équipe d'épidémiologistes et de cryptographeurs (y compris l'un de nous, Marcel Salathé) est *déjà* en train de créer une appli de traçage de contacts — dont le code est publique — qui ne révèle **aucune info à propos de votre identité, position, qui sont vos contacts ou même *avec combien de personnes* vous avez été en contact.**
 
-Here's how it works:
+Voici comment ça marche :
 
 ![](pics/dp3t.png)
 
-(& [here's the full comic](https://ncase.me/contact-tracing/))
+(et [voici la BD entière](https://ncase.me/contact-tracing/))
 
-Along with similar teams like TCN Protocol[^tcn] and MIT PACT[^pact], they've inspired Apple & Google to bake privacy-first contact tracing directly into Android/iOS.[^gapple] (Don't trust Google/Apple? Good! The beauty of this system is it doesn't *need* trust!) Soon, your local public health agency may ask you to download an app. If it's privacy-first with publicly-available code, please do!
+Avec d'autres équipes similaires comme TCN Protocol[^tcn] et MIT PACT[^pact], ils ont inspiré Apple et Google à intégrer un traçage de contacts avec confidentialité avant tout dans Android/iOS.[^gapple] (Vous ne faites pas confiance à Google/Apple ? Bien ! La beauté de ce système est qu'il n'a *pas besoin* de confiance !) Bientôt, votre agence de santé publique locale pourrait vous demander de télécharger une appli. Si c'est avec confidentialité avant tout et du code publique, je vous en prie !
 
-[^tcn]: [Temporary Contact Numbers, a decentralized, privacy-first contact tracing protocol](https://github.com/TCNCoalition/TCN#tcn-protocol)
+[^tcn]: [Temporary Contact Numbers, un protocole de traçage de contact décentralisé, avec confidentialité avant tout](https://github.com/TCNCoalition/TCN#tcn-protocol)
 
 [^pact]: [PACT: Private Automated Contact Tracing](https://pact.mit.edu/)
 
-[^gapple]: [Apple and Google partner on COVID-19 contact tracing technology ](https://www.apple.com/ca/newsroom/2020/04/apple-and-google-partner-on-covid-19-contact-tracing-technology/). Note they're not making the apps *themselves*, just creating the systems that will *support* those apps.
+[^gapple]: [Apple et Google collaborent sur une technologies de traçage de contact pour le Covid-19](https://www.apple.com/ca/newsroom/2020/04/apple-and-google-partner-on-covid-19-contact-tracing-technology/). Notez qu'ils ne font pas les applis *eux-mêmes*, ils créent juste les systèmes qui vont *permettre* ces applis.
 
-But what about folks without smartphones? Or infections through doorknobs? Or "true" asymptomatic cases? Contact tracing apps can't catch all transmissions... *and that's okay!* We don't need to catch *all* transmissions, just 60%+ to get R < 1.
+Mais quid des gens sans smartphones ? Ou des infections par les poignées de portes ? Ou des cas « vraiment » asymptomatiques ? Les applis de traçage de contacts ne peuvent pas détecter toutes les transmissions… *et ce n'est pas un problème !* On n'a pas besoin de détecter *toutes* les transmissions, seulement 60% pour avoir R < 1.
 
-(Rant about the confusion about pre-symptomatic vs "true" asymptomatic. "True" asymptomatics are rare:[^rant])
+(Diatribe à propos du mélange entre pré-symtpomatique et « vrai » asymptomatique. Les « vrais » asymptomatiques sont rares :[^rant])
 
-[^rant]: Lots of news reports – and honestly, many research papers – did not distinguish between "cases who showed no symptoms when we tested them" (pre-symptomatic) and "cases who showed no symptoms *ever*" (true asymptomatic). The only way you could tell the difference is by following up with cases later.
+[^rant]: Beaucoup de journaux — et franchement, beaucoup d'articles de recherche — n'ont pas fait la distinction entre « les cas qui ne montrent pas de symptômes quand on les a testés » (pré-symptomatique) et « les cas qui n'ont *jamais* montré de symptômes » (vrai asymptomatique). La seule manière de faire la différence est de suivre les cas par la suite.
    
-    Which is what [this study](https://wwwnc.cdc.gov/eid/article/26/8/20-1274_article) did. (Disclaimer: "Early release articles are not considered as final versions.") In a call center in South Korea that had a COVID-19 outbreak, "only 4 (1.9%) remained asymptomatic within 14 days of quarantine, and none of their household contacts acquired secondary infections."
+    Ce qui est ce que [cette étude](https://wwwnc.cdc.gov/eid/article/26/8/20-1274_article) a fait. (Avertissement : « Les distributions préliminaires ne sont pas considérées des versions finales. ») Dans un centre d'appel en Corée du Sud qui a eu une épidémie de Covid-19, « seulement 4 (1,9%) sont restés asymptomatiques pendant 14 jours de quarantaine et aucun de leurs contacts domestiques n'ont eu d'infections secondaires. »
     
-    So that means "true asymptomatics" are rare, and catching the disease from a true asymptomatic may be even rarer!
+	Donc ça veut dire que les « vrais asymptomatiques » sont rares et qu'attraper la maladie d'un vrai asymptomatique pourrait être encore plus rare !
 
-Isolating *symptomatic* cases would reduce R by up to 40%, and quarantining their *pre/a-symptomatic* contacts would reduce R by up to 50%[^oxford]:
+Isoler les cas *symptomatiques* réduirait R jusqu'à 40% et mettre en quarantaine leurs contact *pré/a-symptomatiques* réduirait R jusqu'à 50%[^oxford] :
 
-[^oxford]: From the same Oxford study that first recommended apps to fight COVID-19: [Luca Ferretti & Chris Wymant et al](https://science.sciencemag.org/content/early/2020/04/09/science.abb6936/tab-figures-data) See Figure 2. Assuming R<sub>0</sub> = 2.0, they found that:    
+[^oxford]: De la même étude d'Oxford qui a recommandé en premier de combattre le Covid-19 avec des applis : [Luca Ferretti & Chris Wymant et al](https://science.sciencemag.org/content/early/2020/04/09/science.abb6936/tab-figures-data) Regardez la Figure 2. En présumant que R<sub>0</sub> = 2.0, ils ont trouvé que :
     
-    * Symptomatics contribute R = 0.8 (40%)
-    * Pre-symptomatics contribute R = 0.9 (45%)
-    * Asymptomatics contribute R = 0.1 (5%, though their model has uncertainty and it could be much lower)
-    * Environmental stuff like doorknobs contribute R = 0.2 (10%)
+	* Les symptomatiques contribuent R = 0,8 (40%)
+	* Les pré-symptomatiques contribuent R = 0,9 (45%)
+	* Les asymptomatiques contribuent R = 0,1 (5%, quoique leur modèle a de l'incertitude et cela pourrait être bien plus bas)
+	* Les trucs environnementaux comme les poignées de porte contribuent R = 0,2 (10%)
 
-    And add up the pre- & a-symptomatic contacts (45% + 5%) and you get 50% of R!
+	Et ajoutez les contacts pré- et a-symptomatiques (45% et 5%) et vous obtenez 50% de R !
 
 <div class="sim">
 		<iframe src="sim?stage=int-4a&format=calc" width="285" height="340"></iframe>
 </div>
 
-Thus, even without 100% contact quarantining, we can get R < 1 *without a lockdown!* Much better for our mental & financial health. (As for the cost to folks who have to self-isolate/quarantine, *governments should support them* – pay for the tests, job protection, subsidized paid leave, etc. Still way cheaper than intermittent lockdown.)
+Ainsi, même sans mettre en quarantaine 100% des contacts, on peut obtenir R < 1 *sans confinement !* Bien mieux pour notre santé mentale et financière. (Et pour le coût pour les gens qui doivent s'auto-isoler ou se mettre en quarantaine, *les gouvernements devraient les soutenir* — payer pour les tests, la protection de l'emploi, subventionner les congés maladie, etc. C'est toujours bien moins cher que du confinement intermittent.)
 
-We then keep R < 1 until we have a vaccine, which turns susceptible <icon s></icon>s into immune <icon r></icon>s. Herd immunity, the *right* way:
+On garde alors R < 1 jusqu'à ce qu'on ait un vaccin, qui transforme les susceptibles <icon s></icon>s en immunisés <icon r></icon>s. L'immunité grégaire, de la *bonne* manière :
 
 <div class="sim">
 		<iframe src="sim?stage=int-4b&format=calc" width="285" height="230"></iframe>
 </div>
 
-(Note: this calculator pretends the vaccines are 100% effective. Just remember that in reality, you'd have to compensate by vaccinating *more* than "herd immunity", to *actually* get herd immunity)
+(Note : ce calculateur fait semblant que les vaccins sont efficaces à 100%. Rappelez-vous qu'en réalité, il faudrait compenser en vaccinant *plus* que « l'immunité grégaire », pour *vraiment* obtenir l'immunité grégaire)
 
-Okay, enough talk. Here's a simulation of:
+OK, assez parlé. Voici une simulation de :
 
-1. A few-month lockdown, until we can...
-2. Switch to "Test, Trace, Isolate" until we can...
-3. Vaccinate enough people, which means...
-4. We win.
+1. Un confinement de quelques mois, jusqu'à ce qu'on puisse…
+2. Passer à « Tester, Tracer, Isoler » jusqu'à ce qu'on puisse…
+3. Vacciner assez de gens, ce qui veut dire que…
+4. On a gagné.
 
 <div class="sim">
 		<iframe src="sim?stage=int-5&format=lines" width="800" height="540"></iframe>
 </div>
 
-So that's it! That's how we make an emergency landing on this plane.
+Et c'est tout ! Voilà comment on fait un atterrissage d'urgence avec cet avion.
 
-That's how we beat COVID-19.
+Voilà comment on bat le Covid-19.
 
-...
+…
 
-But what if things *still* go wrong? Things have gone horribly wrong already. That's fear, and that's good! Fear gives us energy to create *backup plans*.
+Mais et si les choses se passent *quand même* mal ? Les choses se sont déjà horriblement mal passées. C'est de la peur, et c'est bien ! La peur nous donne l'énergie de créer des *plans de secours*.
 
-The pessimist invents the parachute.
+Les pessimistes inventent les parachutes.
 
 ###Scenario 4+ : Masques pour tous, été, "Disjoncteur" 
 
