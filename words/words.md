@@ -362,7 +362,7 @@ How?
 
 *« Bien sûr, on \*pourrait\* avoir fait comme Taïwan et la Corée du Sud ont fait au début, mais c'est désormais trop tard. On a loupé le départ. »*
 
-Mais c'est justement ça ! « Un confinement n'est pas un remède, c'est juste un redémarrage »… **et c'est exactement d'un nouveau départ dont nous avons besoin.**
+Mais c'est justement ça ! « Un confinement n'est pas un remède, c'est juste un retour à la case départ »… **et c'est exactement d'un nouveau départ dont nous avons besoin.**
 
 Pour comprendre comment Taïwan et la Corée du Sud ont contenu le Covid-19, nous devons comprendre le déroulement précis d'une infection typique au Covid-19[^timeline] :
 
