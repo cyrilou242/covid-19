@@ -112,7 +112,11 @@ contained!
 
 #### Traduction (français) 
 
+épidémie
 
+endémie
+
+contenue !
 
 ### r3.png
 #### Original (anglais) 
@@ -142,7 +146,15 @@ of transmission to get R<1, and stop the spread!
 
 #### Traduction (français) 
 
+Si R_0 est de
 
+(1.0 ... 4.0)
+
+alors il faut empêcher
+
+(0%, ..., 75%)
+
+des transmission pour avoir R<1, et arrêter la propagation !
 
 ### seir.png
 #### Original (anglais) 
@@ -161,7 +173,17 @@ recovery
 
 #### Traduction (français) 
 
+Plus lent quand moins nombreux
+plus rapide quand plus nombreux
 
+Sain
+Exposé
+Infectieux
+Guéri
+
+transmission
+incubation
+guérison
 
 ### seirs.png
 #### Original (anglais) 
@@ -182,7 +204,19 @@ waning
 
 #### Traduction (français) 
 
+Plus lent quand moins nombreux
+plus rapide quand plus nombreux
 
+Sain
+Exposé
+Infectieux
+Guéri
+
+transmission
+incubation
+guérison
+
+perte de l'immunité
 
 ### sir.png
 #### Original (anglais) 
@@ -199,7 +233,15 @@ recovery
 
 #### Traduction (français) 
 
+Plus lent quand moins nombreux
+plus rapide quand plus nombreux
 
+Sain
+Exposé
+Infectieux
+
+transmission
+incubation
 
 ### spread.png
 #### Original (anglais) 
@@ -229,7 +271,11 @@ When population ~0% _, a _ can infect 0% of contact
 
 #### Traduction (français) 
 
+Quand la population est à ~100% _, un _ peut infecter 100% de ses contacts
 
+Quand la population est à ~50% _, un _ peut infecter 50% de ses contacts
+
+Quand la population est à ~0% _, un _ peut infecter 0% de ses contacts
 
 ### timeline1.png
 #### Original (anglais) 
@@ -248,7 +294,17 @@ infects someone else
 
 #### Traduction (français) 
 
+jour 0
+exposé
 
+jour 3
+infectieux
+
+jour 5
+infectieux (avec des symptômes)
+
+jour 4
+infecte quelqu'un d'autre
 
 ### timeline2.png
 #### Original (anglais) 
@@ -257,7 +313,7 @@ isolate symptomatic cases
 
 #### Traduction (français) 
 
-
+isoler les cas symptomatiques
 
 ### timeline3.png
 #### Original (anglais) 
@@ -266,3 +322,4 @@ isolate symptomatic cases *and* quarantine contacts
 
 #### Traduction (français) 
 
+isoler les cas symptomatiques et mettre leurs contacts en quarantaine
