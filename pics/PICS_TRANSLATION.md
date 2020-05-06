@@ -51,7 +51,13 @@ But they are effective at preventing you from getting *others* sick!
 
 #### Traduction (français) 
 
+Les gouttelettes rapetissent quand elles traversent l'air, à cause de l'évaporation.
 
+Les masques sont meilleurs pour bloquer les grosses gouttelettes, pires pour les petites.
+
+C'est pourquoi les masques ne sont pas efficaces pour *vous* empêcher d'être malade ...
+
+Mais ils sont efficaces pour que vous évitiez de rendre les *autres* malades !
 
 ### mitigation_vs_suppression.png
 #### Original (anglais) 
@@ -62,7 +68,9 @@ Suppression
 
 #### Traduction (français) 
 
+Atténuation
 
+Endiguement
 
 ### plan.png
 #### Original (anglais) 
@@ -81,7 +89,17 @@ If immunity doesn't last, do regular vaccinations. If no vaccine, change behavio
 
 #### Traduction (français) 
 
+L'objectif : R<1.
+En commençant avec un ...
 
+CONFINEMENT
+Pour bénéficier d'un nouveau départ et pour acheter du temps avant la transition vers ...
+
+LES TESTS, LE TRACAGE, L'ISOLATION
+Si ce n'est pas assez pour avoir R<1, ajouter des **masques pour tous** et/ou des confinements pour enrayer la transmission, jusqu'à pouvoir
+
+VACCINATE
+Si l'immunité ne dure pas, faire des vaccinations régulières. S'il n'y a pas de vaccin, changer les normes comportomentales en attendant d'avoir un remède !
 
 ### r2.png
 #### Original (anglais) 
