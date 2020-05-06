@@ -378,7 +378,7 @@ Si les cas s'auto-isolent seulement quand ils savent qu'ils sont malades (c'est-
 
 ![](pics/timeline2.png)
 
-Et en fait, 44% de toutes les transmissions se font de cette façon: *pré*-symptomatique ! [^pre_symp]
+Et en fait, 44% de toutes les transmissions se font de cette façon: *pré*-symptomatiquement ! [^pre_symp]
 
 [^pre_symp]: « Nous avons estimé que 44% (intervall de confiance de 95%, 25–69%) des cas secondaires avaient été infectés pendant l'étape présymptomatique des cas index » [He, X., Lau, E.H.Y., Wu, P. et al](https://www.nature.com/articles/s41591-020-0869-5)
 
@@ -386,11 +386,11 @@ Mais, si nous trouvons *et mettons en quarantaine* les contacts récents d'un ca
 
 ![](pics/timeline3.png)
 
-C'est ce qu'on appelle le **traçage des contacts**. C'est une vieille idée, elle a été utilisée à une échelle sans précédent pour contenir Ebola[^ebola], and maintenant elle est une partie centrale de comment Taïwan et la Corée du Sud contiennent le Covdi-19 !
+C'est ce qu'on appelle le **traçage des contacts**. C'est une vieille idée, elle a été utilisée à une échelle sans précédent pour contenir Ebola[^ebola], et maintenant elle est une partie centrale de comment Taïwan et la Corée du Sud contiennent le Covdi-19 !
 
-[^ebola]: « Le traçage des contacts a été une intervention critique au Liberia et a représenté un des plus grands efforts de traçage de contacts de l'histoire. » [Swanson KC, Altare C, Wesseh CS, et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6152989/)
+[^ebola]: « Le traçage des contacts a été une intervention critique au Liberia et a représenté un des plus grands efforts de traçage de contacts de l'Histoire. » [Swanson KC, Altare C, Wesseh CS, et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6152989/)
 
-(Il nous permet aussi d'utiliser nos tests limités plus efficacement, pour trouver les <icon i></icon>s pré-symptomatiques sans avoir besoin de tester tout le monde.)
+(Il nous permet aussi d'utiliser nos tests en nombre limité plus efficacement, pour trouver les <icon i></icon>s pré-symptomatiques sans avoir besoin de tester tout le monde.)
 
 Traditionnellement, les contacts sont trouvés grâce à des entretiens physiques, mais à eux *seuls*, ils sont trop lents pour la fenêtre d'environ 48 heures du Covid-19. C'est pourquoi les traceurs de contacts ont besoin d'aide, et sont aidés par — *PAS* remplacés par — des applis de traçage de contacts.
 
@@ -398,7 +398,7 @@ Traditionnellement, les contacts sont trouvés grâce à des entretiens physique
 
 Attendez, des applis qui tracent avec qui vous avez été en contact ?… Est-ce que ça veut dire abandonner toute confidentialité, céder à Big Brother ?
 
-Sûrement pas ! **[DP-3T](https://github.com/DP-3T/documents#decentralized-privacy-preserving-proximity-tracing)**, une équipe d'épidémiologistes et de cryptographeurs (y compris l'un de nous, Marcel Salathé) est *déjà* en train de créer une appli de traçage de contacts — dont le code est publique — qui ne révèle **aucune info à propos de votre identité, position, qui sont vos contacts ou même *avec combien de personnes* vous avez été en contact.**
+Sûrement pas ! **[DP-3T](https://github.com/DP-3T/documents#decentralized-privacy-preserving-proximity-tracing)**, une équipe d'épidémiologistes et de cryptographes (y compris l'un de nous, Marcel Salathé) est *déjà* en train de créer une appli de traçage de contacts — dont le code est publique — qui ne révèle **aucune info à propos de votre identité, position, qui sont vos contacts ou même *avec combien de personnes* vous avez été en contact.**
 
 Voici comment ça marche :
 
@@ -406,7 +406,7 @@ Voici comment ça marche :
 
 (et [voici la BD entière](https://ncase.me/contact-tracing/))
 
-Avec d'autres équipes similaires comme TCN Protocol[^tcn] et MIT PACT[^pact], ils ont inspiré Apple et Google à intégrer un traçage de contacts avec confidentialité avant tout dans Android/iOS.[^gapple] (Vous ne faites pas confiance à Google/Apple ? Bien ! La beauté de ce système est qu'il n'a *pas besoin* de confiance !) Bientôt, votre agence de santé publique locale pourrait vous demander de télécharger une appli. Si c'est avec confidentialité avant tout et du code publique, je vous en prie !
+Avec d'autres équipes similaires comme TCN Protocol[^tcn] et MIT PACT[^pact], ils ont inspiré Apple et Google à intégrer un traçage de contacts avec confidentialité avant tout dans Android/iOS.[^gapple] (Vous ne faites pas confiance à Google/Apple ? Bien ! La beauté de ce système est qu'il n'a *pas besoin* de confiance !) Bientôt, votre agence de santé publique locale pourrait vous demander de télécharger une appli. Si c'est avec confidentialité avant tout et du code publique, je vous en prie, faites-le !
 
 [^tcn]: [Temporary Contact Numbers, un protocole de traçage de contact décentralisé, avec confidentialité avant tout](https://github.com/TCNCoalition/TCN#tcn-protocol)
 
@@ -441,13 +441,13 @@ Isoler les cas *symptomatiques* réduirait R jusqu'à 40% et mettre en quarantai
 
 Ainsi, même sans mettre en quarantaine 100% des contacts, on peut obtenir R < 1 *sans confinement !* Bien mieux pour notre santé mentale et financière. (Et pour le coût pour les gens qui doivent s'auto-isoler ou se mettre en quarantaine, *les gouvernements devraient les soutenir* — payer pour les tests, la protection de l'emploi, subventionner les congés maladie, etc. C'est toujours bien moins cher que du confinement intermittent.)
 
-On garde alors R < 1 jusqu'à ce qu'on ait un vaccin, qui transforme les susceptibles <icon s></icon>s en immunisés <icon r></icon>s. L'immunité grégaire, de la *bonne* manière :
+On garde alors R < 1 jusqu'à ce qu'on ait un vaccin, qui transforme les susceptibles <icon s></icon>s en immunisés <icon r></icon>s. L'immunité collective, de la *bonne* manière :
 
 <div class="sim">
 		<iframe src="sim?stage=int-4b&format=calc" width="285" height="230"></iframe>
 </div>
 
-(Note : ce calculateur fait semblant que les vaccins sont efficaces à 100%. Rappelez-vous qu'en réalité, il faudrait compenser en vaccinant *plus* que « l'immunité grégaire », pour *vraiment* obtenir l'immunité grégaire)
+(Note : ce calculateur fait semblant que les vaccins sont efficaces à 100%. Rappelez-vous qu'en réalité, il faudrait compenser en vaccinant *plus* que « l'immunité collective », pour *vraiment* obtenir l'immunité collective)
 
 OK, assez parlé. Voici une simulation de :
 
@@ -466,7 +466,7 @@ Voilà comment on bat le Covid-19.
 
 …
 
-Mais et si les choses se passent *quand même* mal ? Les choses se sont déjà horriblement mal passées. C'est de la peur, et c'est bien ! La peur nous donne l'énergie de créer des *plans de secours*.
+Mais si les choses se passent *quand même* mal ? Les choses se sont déjà horriblement mal passées. C'est de la peur, et c'est bien ! La peur nous donne l'énergie de créer des *plans de secours*.
 
 Le pessimiste invente le parachute.
 
