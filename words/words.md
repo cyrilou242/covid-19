@@ -360,11 +360,11 @@ How?
 
 ###Scénario 4 : Test, Suivi, Isolement
 
-*« Bien sûr, on \*pourrait\* avoir fait comme Taiwan et la Corée du Sud ont fait au début, mais c'est désormais trop tard. On a loupé le départ. »*
+*« Bien sûr, on \*pourrait\* avoir fait comme Taïwan et la Corée du Sud ont fait au début, mais c'est désormais trop tard. On a loupé le départ. »*
 
 Mais c'est justement ça ! « Un confinement n'est pas un remède, c'est juste un redémarrage »… **et c'est exactement d'un nouveau départ dont nous avons besoin.**
 
-Pour comprendre comment Taiwen et la Corée du Sud ont contenu le Covid-19, nous devons comprendre le déroulement précis d'une infection typique au Covid-19[^timeline] :
+Pour comprendre comment Taïwan et la Corée du Sud ont contenu le Covid-19, nous devons comprendre le déroulement précis d'une infection typique au Covid-19[^timeline] :
 
 [^timeline]: **3 jours en moyenne jusqu'à l'infectiosité :** « En présumant une distribution de la période d'incubation avec une moyenne de 5,2 jours grâce à une autre étude des premiers cas de Covid-19, nous avons déduit que l'infectiosité démarrait 2,3 jours (IC 95%, 0,8–3,0 jours) avant l'apparition des symptômes » (traduction : En présumant que les symptômes démarrent à 5 jours, l'infectiosité démarre 2 jours plus tôt = l'nfectiosité démarre à 3 jours) [He, X., Lau, E.H.Y., Wu, P. et al.](https://www.nature.com/articles/s41591-020-0869-5)  
     
@@ -386,7 +386,7 @@ Mais, si nous trouvons *et mettons en quarantaine* les contacts récents d'un ca
 
 ![](pics/timeline3.png)
 
-C'est ce qu'on appelle le **traçage des contacts**. C'est une vieille idée, elle a été utilisée à une échelle sans précédent pour contenir Ebola[^ebola], and maintenant elle est une partie centrale de comment Taiwan et la Corée du Sud contiennent le Covdi-19 !
+C'est ce qu'on appelle le **traçage des contacts**. C'est une vieille idée, elle a été utilisée à une échelle sans précédent pour contenir Ebola[^ebola], and maintenant elle est une partie centrale de comment Taïwan et la Corée du Sud contiennent le Covdi-19 !
 
 [^ebola]: « Le traçage des contacts a été une intervention critique au Liberia et a représenté un des plus grands efforts de traçage de contacts de l'histoire. » [Swanson KC, Altare C, Wesseh CS, et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6152989/)
 
