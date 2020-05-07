@@ -360,29 +360,29 @@ How?
 
 ###Scénario 4 : Test, Suivi, Isolement
 
-*« Bien sûr, on \*pourrait\* avoir fait comme Taïwan et la Corée du Sud ont fait au début, mais c'est désormais trop tard. On a loupé le départ. »*
+*« Bien sûr, nous \*pourrions\* avoir fait comme Taïwan et la Corée du Sud ont fait au départ, mais c'est désormais trop tard. On a loupé le départ. »*
 
-Mais c'est justement ça ! « Un confinement n'est pas un remède, c'est juste un retour à la case départ »… **et c'est exactement d'un nouveau départ dont nous avons besoin.**
+Mais c'est justement ça ! « Un confinement n'est pas un remède, c'est juste un retour à la case départ »… **et c'est d'un nouveau départ dont nous avons besoin.**
 
 Pour comprendre comment Taïwan et la Corée du Sud ont contenu le Covid-19, nous devons comprendre le déroulement précis d'une infection typique au Covid-19[^timeline] :
 
-[^timeline]: **3 days on average to infectiousness:** “Assuming an incubation period distribution of mean 5.2 days from a separate study of early COVID-19 cases, we inferred that infectiousness started from 2.3 days (95% CI, 0.8–3.0 days) before symptom onset” (translation: Assuming symptoms start at 5 days, infectiousness starts 2 days before = Infectiousness starts at 3 days) [He, X., Lau, E.H.Y., Wu, P. et al.](https://www.nature.com/articles/s41591-020-0869-5) Traduction : **3 jours en moyenne jusqu'à l'infectiosité :** « En présumant une distribution de la période d'incubation avec une moyenne de 5,2 jours grâce à une autre étude des premiers cas de Covid-19, nous avons déduit que l'infectiosité démarrait 2,3 jours (IC 95%, 0,8–3,0 jours) avant l'apparition des symptômes » (traduction : En présumant que les symptômes démarrent à 5 jours, l'infectiosité démarre 2 jours plus tôt = l'nfectiosité démarre à 3 jours)
+[^timeline]: **3 days on average to infectiousness:** “Assuming an incubation period distribution of mean 5.2 days from a separate study of early COVID-19 cases, we inferred that infectiousness started from 2.3 days (95% CI, 0.8–3.0 days) before symptom onset” (translation: Assuming symptoms start at 5 days, infectiousness starts 2 days before = Infectiousness starts at 3 days) [He, X., Lau, E.H.Y., Wu, P. et al.](https://www.nature.com/articles/s41591-020-0869-5) Traduction : **3 jours en moyenne jusqu'à l'infectiosité :** « En supposant que la période d'incubation est en moyenne de 5,2 jours en s'appuyant sur une autre étude des premiers cas de COVID-19, nous en déduisons que la contagiosité commence au bout de 2,3 jours (IC 95% : 0,8–3,0 jours) avant l'apparition des symptômes » (explication : En supposant que les symptômes commencent au 5ème jour, sachant que le caractère infectieux commence 2 jours avant, on devient infectieux au bout de 3 jours)
     
-	**4 days on average to infecting someone else:** “The mean [serial] interval was 3.96 days (95% CI 3.53–4.39 days)” [Du Z, Xu X, Wu Y, Wang L, Cowling BJ, Ancel Meyers L](https://wwwnc.cdc.gov/eid/article/26/6/20-0357_article) Traduction : **4 jours en moyenne pour infecter quelqu'un d'autre :** « L'intervalle moyen [en série] était de 3,96 jours (IC 95% 3,53–4,39 jours) »
+	**4 days on average to infecting someone else:** “The mean [serial] interval was 3.96 days (95% CI 3.53–4.39 days)” [Du Z, Xu X, Wu Y, Wang L, Cowling BJ, Ancel Meyers L](https://wwwnc.cdc.gov/eid/article/26/6/20-0357_article) Traduction : **4 jours en moyenne pour infecter quelqu'un d'autre :** « L'intervalle [sériel] moyen était de 3,96 jours (IC 95% : 3,53–4,39 jours) »
     
-	**5 days on average to feeling symptoms:** “The median incubation period was estimated to be 5.1 days (95% CI, 4.5 to 5.8 days)” [Lauer SA, Grantz KH, Bi Q, et al](https://annals.org/AIM/FULLARTICLE/2762808/INCUBATION-PERIOD-CORONAVIRUS-DISEASE-2019-COVID-19-FROM-PUBLICLY-REPORTED) Traduction : **5 jours en moyenne pour ressentir des sypmtômes :** « La période d'incubation moyenne a été estimée à 5,1 jours (IC 95%, 4,5 à 5,8 jours) »
+	**5 days on average to feeling symptoms:** “The median incubation period was estimated to be 5.1 days (95% CI, 4.5 to 5.8 days)” [Lauer SA, Grantz KH, Bi Q, et al](https://annals.org/AIM/FULLARTICLE/2762808/INCUBATION-PERIOD-CORONAVIRUS-DISEASE-2019-COVID-19-FROM-PUBLICLY-REPORTED) Traduction : **5 jours en moyenne pour ressentir des symptômes :** « La période d'incubation médiane a été estimée à 5,1 jours (IC 95%, 4,5 à 5,8 jours) »
 
 ![](pics/timeline1.png)
 
-Si les cas s'auto-isolent seulement quand ils savent qu'ils sont malades (c'est-à-dire quand ils ressentent des symptômes), le virus peut encore se répandre :
+Si les cas s'isolent seulement quand ils savent qu'ils sont malades (c'est-à-dire quand ils ressentent des symptômes), le virus peut encore se répandre :
 
 ![](pics/timeline2.png)
 
-Et en fait, 44% de toutes les transmissions se font de cette façon: *pré*-symptomatiquement ! [^pre_symp]
+Et en fait, 44% des transmissions ont lieu ainsi : *pré*-symptomatiquement ! [^pre_symp]
 
 [^pre_symp]: “We estimated that 44% (95% confidence interval, 25–69%) of secondary cases were infected during the index cases’ presymptomatic stage” [He, X., Lau, E.H.Y., Wu, P. et al](https://www.nature.com/articles/s41591-020-0869-5) Traduction : « Nous avons estimé que 44% (intervall de confiance de 95%, 25–69%) des cas secondaires avaient été infectés pendant l'étape présymptomatique des cas index »
 
-Mais, si nous trouvons *et mettons en quarantaine* les contacts récents d'un cas symptomatique… on arrête la propagation, en ayant toujours un coup d'avance !
+Mais, si nous trouvons *et mettons en quarantaine* les contacts récents d'un cas symptomatique… nous arrêtons la propagation, en ayant toujours un coup d'avance !
 
 ![](pics/timeline3.png)
 
@@ -452,7 +452,7 @@ On garde alors R < 1 jusqu'à ce qu'on ait un vaccin, qui transforme les suscept
 OK, assez parlé. Voici une simulation de :
 
 1. Un confinement de quelques mois, jusqu'à ce qu'on puisse…
-2. Passer à « Tester, Tracer, Isoler » jusqu'à ce qu'on puisse…
+2. Passer à « Test, Suivi, Isolement » jusqu'à ce qu'on puisse…
 3. Vacciner assez de gens, ce qui veut dire que…
 4. On a gagné.
 
