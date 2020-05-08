@@ -358,7 +358,7 @@ But wait... haven't Taiwan and South Korea *already* contained COVID-19? For 4 w
 
 How?
 
-###Scénario 4 : Test, Suivi, Isolement
+###Scénario 4 : Tester, Traçer, Isoler
 
 *« Bien sûr, nous \*pourrions\* avoir fait comme Taïwan et la Corée du Sud ont fait au départ, mais c'est désormais trop tard. On a loupé le départ. »*
 
@@ -452,7 +452,7 @@ On garde alors R < 1 jusqu'à ce qu'on ait un vaccin, qui transforme les suscept
 OK, assez parlé. Voici une simulation de :
 
 1. Un confinement de quelques mois, jusqu'à ce qu'on puisse…
-2. Passer à « Test, Suivi, Isolement » jusqu'à ce qu'on puisse…
+2. Passer à « Tester, Traçer, Isoler » jusqu'à ce qu'on puisse…
 3. Vacciner assez de gens, ce qui veut dire que…
 4. On a gagné.
 
