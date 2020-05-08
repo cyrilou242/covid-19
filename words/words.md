@@ -378,11 +378,11 @@ Si les cas s'isolent seulement quand ils savent qu'ils sont malades (c'est-à-di
 
 ![](pics/timeline2.png)
 
-Et en fait, 44% des transmissions ont lieu ainsi : *pré*-symptomatiquement ! [^pre_symp]
+Et, en fait, 44% des transmissions ont lieu ainsi : *pré*-symptomatiquement ! [^pre_symp]
 
-[^pre_symp]: “We estimated that 44% (95% confidence interval, 25–69%) of secondary cases were infected during the index cases’ presymptomatic stage” [He, X., Lau, E.H.Y., Wu, P. et al](https://www.nature.com/articles/s41591-020-0869-5) Traduction : « Nous avons estimé que 44% (intervall de confiance de 95%, 25–69%) des cas secondaires avaient été infectés pendant l'étape présymptomatique des cas index »
+[^pre_symp]: “We estimated that 44% (95% confidence interval, 25–69%) of secondary cases were infected during the index cases’ presymptomatic stage” [He, X., Lau, E.H.Y., Wu, P. et al](https://www.nature.com/articles/s41591-020-0869-5) Traduction : « Nous avons estimé que 44% (intervalle de confiance de 95%, 25–69%) des cas secondaires avaient été infectés pendant l'étape présymptomatique des cas index »
 
-Mais, si nous trouvons *et mettons en quarantaine* les contacts récents d'un cas symptomatique… nous arrêtons la propagation, en ayant toujours un coup d'avance !
+Mais si nous trouvons *et mettons en quarantaine* les contacts récents d'un cas symptomatique… nous arrêtons la propagation, en ayant toujours un coup d'avance !
 
 ![](pics/timeline3.png)
 
@@ -406,9 +406,9 @@ Voici comment ça marche :
 
 (et [voici la BD entière](https://ncase.me/contact-tracing/))
 
-Avec d'autres équipes similaires comme TCN Protocol[^tcn] et MIT PACT[^pact], ils ont inspiré Apple et Google à intégrer un traçage de contacts avec confidentialité avant tout dans Android/iOS.[^gapple] (Vous ne faites pas confiance à Google/Apple ? Bien ! La beauté de ce système est qu'il n'a *pas besoin* de confiance !) Bientôt, votre agence de santé publique locale pourrait vous demander de télécharger une appli. Si c'est avec confidentialité avant tout et du code publique, je vous en prie, faites-le !
+Avec d'autres équipes similaires comme TCN Protocol[^tcn] et MIT PACT[^pact], ils ont inspiré Apple et Google à intégrer un traçage de contacts respectueux de la vie privée dans Android/iOS.[^gapple] (Vous ne faites pas confiance à Google/Apple ? Bien ! La beauté de ce système est qu'il n'a *pas besoin* de confiance !) Bientôt, votre agence de santé publique locale pourrait vous demander de télécharger une appli. Si elle est respectueuse de la vie privée et avec un code publique, je vous en prie, faites-le !
 
-[^tcn]: [Temporary Contact Numbers, un protocole de traçage de contact décentralisé, avec confidentialité avant tout](https://github.com/TCNCoalition/TCN#tcn-protocol)
+	[^tcn]: [Temporary Contact Numbers, un protocole de traçage de contact décentralisé, respectueux de la vie privée](https://github.com/TCNCoalition/TCN#tcn-protocol)
 
 [^pact]: [PACT: Private Automated Contact Tracing](https://pact.mit.edu/)
 
@@ -420,7 +420,7 @@ Mais quid des gens sans smartphones ? Ou des infections par les poignées de po
 
 [^rant]: Beaucoup de journaux — et franchement, beaucoup d'articles de recherche — n'ont pas fait la distinction entre « les cas qui ne montrent pas de symptômes quand on les a testés » (pré-symptomatique) et « les cas qui n'ont *jamais* montré de symptômes » (vrai asymptomatique). La seule manière de faire la différence est de suivre les cas par la suite.
    
-    Ce qui est ce que [cette étude](https://wwwnc.cdc.gov/eid/article/26/8/20-1274_article) a fait. (Avertissement : « Les distributions préliminaires ne sont pas considérées des versions finales. ») Dans un centre d'appel en Corée du Sud qui a eu une épidémie de Covid-19, « seulement 4 (1,9%) sont restés asymptomatiques pendant 14 jours de quarantaine et aucun de leurs contacts domestiques n'ont eu d'infections secondaires. »
+    C'est ce que [cette étude](https://wwwnc.cdc.gov/eid/article/26/8/20-1274_article) a fait. (Attention : « Les pré-publications ne sont pas considérées des versions finales. ») Dans un centre d'appel en Corée du Sud qui a eu une épidémie de Covid-19, « seulement 4 (1,9%) sont restés asymptomatiques pendant 14 jours de quarantaine et aucun de leurs contacts domestiques n'ont eu d'infections secondaires. »
     
 	Donc ça veut dire que les « vrais asymptomatiques » sont rares et qu'attraper la maladie d'un vrai asymptomatique pourrait être encore plus rare !
 
