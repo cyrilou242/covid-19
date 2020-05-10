@@ -306,7 +306,7 @@ Trois observations :
 
 1. Le nombre total de cas *baisse* ! **Même si on n'arrive pas à R < 1, réduire R sauve quand même des vies en réduisant le dépassement au dessus du seuil d'immunité collective.** Beaucoup de gens s'imaginent « qu'aplatir la courbe » étale les cas sans toutefois réduire leur nombre total. C'est impossible dans *n'importe lequel* des modèles de base de l'épidémiologie. Mais parce que les médias d'actualité présentaient l'affirmation « 80% seront infectés » comme inévitable, les gens ont pensé que le nombre total de cas serait le même quoi qu'on fasse. *Soupir.*
 
-2. A cause des mesures supplémentaires, le nombre de cas actuels atteint un pic *avant* que l'immunité collective ne soit atteinte. En fait, dans cette simulation, le nombre total de cas passe *un tout petit peu* au dessus du seuil d'immunité collective - le plan du Royaume Uni ! A ce moment, R < 1, on peut abandonner toutes les autres mesures d'intervention et le COVID-19 reste contenu ! Eh bien, il y a quand même un problème...
+2. À cause des mesures supplémentaires, le nombre de cas actuels atteint un pic *avant* que l'immunité collective ne soit atteinte. En fait, dans cette simulation, le nombre total de cas passe *un tout petit peu* au dessus du seuil d'immunité collective - le plan du Royaume Uni ! À ce moment, R < 1, on peut abandonner toutes les autres mesures d'intervention et le COVID-19 reste contenu ! Eh bien, il y a quand même un problème...
 
 3. On sature les unités de soins intensifs. Pour plusieurs mois. (et souvenez-vous, on a pourtant *déjà* triplé la capacité pour ces simulations)
 
