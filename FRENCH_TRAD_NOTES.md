@@ -24,9 +24,9 @@ Ne pas changer le nombre de lignes en traduisant. (ie ne pas rajouter/supprimer 
 | Intro |[L25-L41](https://github.com/cyrilou242/covid-19/blame/master/words/words.md#L25-L41) | [X] @cyrilou242  | [X] @donok1  | |
 | LastMonths: Curves | [L43-L153](https://github.com/cyrilou242/covid-19/blame/master/words/words.md#L43-L153) | [X] @cyrilou242   | [X] @e-guenat  | |
 | LastMonths: R | [L155-L237](https://github.com/cyrilou242/covid-19/blame/master/words/words.md#L155-L237)| [X] @e-guenat | [X] @cyrilou242  | |
-| NextMonths: Scenario 0-3  | [L239-L359](https://github.com/cyrilou242/covid-19/blame/master/words/words.md#L239-L359) | **WIP** @e-guenat | [X] @maximebedoin  | |
-| NextMonths: Scenario 4  | [L361-L471](https://github.com/cyrilou242/covid-19/blame/master/words/words.md#L361-L471) |  |   | |
-| NextMonths: Scenario 4+  | [L473-L573](https://github.com/cyrilou242/covid-19/blame/master/words/words.md#L473-L573) | **WIP** @cyrilou242 | [X] @donok1  | |
+| NextMonths: Scénario 0-3  | [L239-L359](https://github.com/cyrilou242/covid-19/blame/master/words/words.md#L239-L359) | **WIP** @e-guenat | [X] @maximebedoin  | |
+| NextMonths: Scénario 4  | [L361-L471](https://github.com/cyrilou242/covid-19/blame/master/words/words.md#L361-L471) |  |   | |
+| NextMonths: Scénario 4+  | [L473-L573](https://github.com/cyrilou242/covid-19/blame/master/words/words.md#L473-L573) | **WIP** @cyrilou242 | [X] @donok1  | |
 | NextYears  | [L575-L682](https://github.com/cyrilou242/covid-19/blame/master/words/words.md#L575-L682) | [X] @e-guenat | [X] @cyrilou242  | |
 | The Now  | [L684-L711](https://github.com/cyrilou242/covid-19/blame/master/words/words.md#L684-L711) | [X] @e-guenat | [X] @cyrilou242  | |
 
@@ -58,7 +58,7 @@ link to roosevelt sentence meaning understandable
 ### LastMonths: R
 - L213: choisi le système français pour l'analogie avec les notes d'école.
 
-### Scenario 4+
+### Scénario 4+
 - L477 overshoot --> "débordement" ? Utilisé dans les parties précédentes pas encore traduites. "  
 
 ### Next years and Now
