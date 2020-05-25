@@ -12,9 +12,9 @@
 				🕐 30 min de jeu/lecture
 				&nbsp;&middot;&nbsp;
 			</b>
-			by
+			par 
 			<a href="https://scholar.google.com/citations?user=_wHMGkUAAAAJ&amp;hl=en">Marcel Salathé</a>
-			(epidemiologist)
+			(épidemiologiste)
 			&
 			<a href="https://ncase.me/">Nicky Case</a>
 			(art/code)
@@ -24,10 +24,10 @@
 
 « La seule chose dont il faille avoir peur est la peur elle-même » - Franklin D. Roosevelt. Conseil douteux.
 
-Bien sûr, on nous rappelle à raison de ne pas se ruer sur le papier toilette. Mais si les responsables politiques craignent la peur et le désordre, ils minimiseront aussi les véritables dangers pour éviter toute panique générale. La peur n'est pas un problème. Le problème est la manière dont nous la canalisons. La peur nous donne l'énergie pour faire face aux dangers de l'instant, et nous prépare aux dangers futurs.
+Bien sûr, on nous rappelle à raison de ne pas se ruer sur le papier toilette. Mais si les responsables politiques craignent la peur et le désordre, ils minimiseront aussi les véritables dangers pour éviter toute panique générale. La peur n'est pas un problème. Le problème, c'est la manière dont nous canalisons cette peur. La peur nous donne l'énergie pour faire face aux dangers de l'instant, et nous prépare aux dangers futurs.
 
 
-Pour être honnête, nous (Marcel - épidémiologiste et Nicky - art/code) sommes inquiets. Tu l'es aussi n'est-ce pas ? C'est pourquoi de nos peurs sont nées ces **simulations interactives**, pour que *tu* puisses à ton tour canaliser tes peurs et comprendre :
+Pour être honnête, nous (Marcel - épidémiologiste et Nicky - art/code) sommes inquiets. Tu l'es aussi n'est-ce pas ? C'est pourquoi de nos peurs sont nées ces **simulations interactives**, pour que *vous* puissiez à votre tour canaliser vos peurs et comprendre :
 
 * **Ces derniers mois** (initiation à l'épidémiologie, modèle SEIR, R et R<sub>0</sub>)
 * **Les mois à venir** (confinement, traçage de contacts, masques)
@@ -39,7 +39,7 @@ Ce guide (publié le 1er Mai 2020. clique sur cette note !→[^timestamp]) est 
     
     **Ce guide a été publié le 1er Mai 2020 et sa traduction en français le TBD Mai 2020.** De nombreux détails deviendront obsolètes, mais nous sommes convaincus que ce guide couvre 95% des futurs possibles, et que notre initiation à l'épidémiologie vous sera bien utile.
 
-Alors accrochez-vous : nous entrons dans une zone de turbulences.
+Alors attachez vos ceintures : nous entrons dans une zone de turbulences.
 
 <div class="section chapter">
     <div>
@@ -52,7 +52,7 @@ Les pilotes utilisent des simulateurs de vol pour apprendre comment ne pas crash
 
 **Les épidémiologistes utilisent des simulateurs d'épidémie pour apprendre comment ne pas crasher l'humanité.**
 
-Créons notre propre très, *très* simple « simulateur de vol épidémique » ! Dans cette simulation, les individus Infectieux <icon i></icon> peuvent transformer les individus Susceptibles de contracter la maladie <icon s></icon> en encore plus d'individus <span class="nowrap">Infectieux <icon i></icon> :</span>
+Créons notre propre « simulateur de vol épidémique » (très, *très* simplifié) ! Dans cette simulation, les individus Infectieux <icon i></icon> peuvent transformer les individus Susceptibles de contracter la maladie <icon s></icon> en encore plus d'individus <span class="nowrap">Infectieux <icon i></icon> :</span>
 
 ![](pics/spread.png)
 
@@ -64,7 +64,7 @@ Que se passe-t-il si nous simulons le cas « double tous les 4 jours », *et r
 
 **Cliquez sur « Lancer » pour réaliser une simulation ! Vous pouvez relancer avec d'autres paramètres quand la simulation est finie :** (limites techniques : [^caveats])
 
-[^caveats]: **Attention : toutes ses simulations sont très simplificatrices, à des fins éducatives.**
+[^caveats]: **Rappel : toutes ses simulations sont très simplificatrices, à des fins éducatives.**
     
     Une simplification : Quand la simulation est parametrée pour « Infecter 1 nouvelle personne tous les X jours », elle va en réalité augmenter le nombre d'infectés d'1/X chaque jour. De même pour les prochains paramètres dans ces simulations : « Guérir tous les X jours » est simulé en « réduit le nombre d'infectés d'1/X chaque jour ».
     
@@ -74,7 +74,7 @@ Que se passe-t-il si nous simulons le cas « double tous les 4 jours », *et r
 		<iframe src="sim?stage=epi-1" width="800" height="540"></iframe>
 </div>
 
-Ceci est la *courbe de croissance exponentielle.** Ça commence petit, puis ça explose. De « Oh ce n'est juste qu'une grippe » à « Ah oui, les grippes n'engendrent pas de *fosses communes dans New-York* ». 
+Ceci est la **courbe de croissance exponentielle.** Ça commence petit, puis ça explose. De « Oh c'est juste une grippe » à « Ah oui, les grippes n'engendrent pas de *fosses communes dans New-York* ». 
 
 ![](pics/exponential.png)
 
@@ -82,7 +82,7 @@ Pour autant, cette simulation est fausse. La croissance exponentielle, heureusem
 
 ![](pics/susceptibles.png)
 
-Plus il y a de <span class="nowrap"><icon i></icon>,</span> plus les <icon s></icon> deviennent des <icon i></icon> rapidement, **mais moins il y a de <span class="nowrap"><icon s></icon>,</span> *moins* les <icon s></icon>s deviennent des <icon i></icon> rapidement.**
+Plus il y a de <span class="nowrap"><icon i></icon>,</span> plus les <icon s></icon> deviennent des <icon i></icon> rapidement, **mais moins il y a de <span class="nowrap"><icon s></icon>,</span> *plus* les <icon s></icon> deviennent des <icon i></icon> *lentement*.**
 
 En quoi cela change la croissance d'une épidémie ? Il n'y a qu'à le simuler :
 
@@ -90,7 +90,7 @@ En quoi cela change la croissance d'une épidémie ? Il n'y a qu'à le simuler�
 		<iframe src="sim?stage=epi-2" width="800" height="540"></iframe>
 </div>
 
-Ceci est la **courbe de croissance logistique** « en S ». Ça commence doucement, ça explose, puis ça ralenti à nouveau.
+Ceci est la **courbe de croissance logistique** « en S ». Ça commence doucement, ça explose, puis ça ralentit à nouveau.
 
 Pour autant, cette simulation est *encore* fausse. On passe à côté du fait qu'un individu Infectieux <icon i></icon> fini par arrêter d'être infectieux, soit en étant : 1) guéri, 2) « guéri » avec des lésions pulmonaires 3) décédé.
 
@@ -120,23 +120,23 @@ En commencant avec seulement 0,001% de <span class="nowrap"><icon i></icon> :</
 		<iframe src="sim?stage=epi-4" width="800" height="540"></iframe>
 </div>
 
-Et *c'est de là* que nous viens cette fameuse courbe ! Ce n'est pas une courbe de Gauss, ni même une courbe « log-normale ». Ça n'a pas de nom, mais vous l'avez vue des millions de fois et vous priez pour qu'elle s'aplatisse.
+Et *c'est de là* que nous vient cette fameuse courbe ! Ce n'est pas une courbe de Gauss, ni même une courbe « log-normale ». Ça n'a pas de nom, mais vous l'avez vue des millions de fois et vous priez pour qu'elle s'aplatisse.
 
 C'est le **Modèle SIR**, [^sir]    
 (<icon s></icon>**S**usceptible <icon i></icon>**I**nfectieux <icon r></icon>**R**ecovered (guéri en anglais))      
-la *deuxième* idée la plus importante de notre initiation à l'épidémiologie :
+le *deuxième* concept clé de notre initiation à l'épidémiologie :
 
 [^sir]: Pour plus d'explications techniques sur le modèle SIR, voir [the Institute for Disease Modeling](https://www.idmod.org/docs/hiv/model-sir.html#) et [Wikipedia](https://fr.wikipedia.org/wiki/Mod%C3%A8les_compartimentaux_en_%C3%A9pid%C3%A9miologie)
 
 ![](pics/sir.png)
 
-**NB : Les simulations qui conseillent les décideurs politiques sont bien, *bien* plus sophistiquées que ça !** Néanmoins le modèle SIR suffit pour trouver un résultat global similaire, même si certaines nuances lui échappe.
+**NB : Les simulations qui conseillent les décideurs politiques sont bien, *bien* plus sophistiquées que ça !** Néanmoins le modèle SIR suffit pour trouver un résultat global similaire, même si certaines nuances lui échappent.
 
 Ajoutons donc une autre nuance : avant qu'un <icon s></icon> ne devienne un <span class="nowrap"><icon i></icon>,</span> il doit d'abord être Exposé <span class="nowrap"><icon e></icon>.</span> Cela correspond au moment où l'individu possède le virus mais ne peut pas encore le transmettre – infect**é** mais pas encore infect**ieux**.
 
 ![](pics/seir.png)
 
-(Cette variante est appellée le **Modèle SEIR**[^seir], avec « E » pour « Exposé » <span class="nowrap"><icon e></icon>.</span> Notez que *ça ne correspond pas* au sens du mot « exposé » de tous les jours : quand il est possible d'avoir *ou non* le virus. La définition technique d'« Exposé » signifie que le virus est bel et bien porté. La terminologie en science est pleine d'absurdité.)
+(Cette variante est appellée le **Modèle SEIR**[^seir], avec « E » pour « Exposé » <span class="nowrap"><icon e></icon>.</span> Notez que *ça ne correspond pas* au sens du mot « exposé » de tous les jours : quand il est possible d'avoir *ou non* le virus. La définition technique d'« Exposé » signifie bel et bien porteur du virus. La terminologie en science est pleine d'absurdités.)
 
 [^seir]: Pour plus d'explications techniques sur le modèle SEIR, voir [the Institute for Disease Modeling](https://www.idmod.org/docs/hiv/model-seir.html) et [Wikipedia](https://fr.wikipedia.org/wiki/Mod%C3%A8les_compartimentaux_en_%C3%A9pid%C3%A9miologie)
 
@@ -153,7 +153,7 @@ Pour le COVID-19, on estime qu'un individu est infecté-mais-pas-encore-infectie
 
 Pas beaucoup de changement ! Le temps que l'on passe en Exposé <icon e></icon> change le ratio de <span class="nowrap"><icon e></icon>-pour-<icon i></icon>,</span> et la *date* du pic de cas... mais la *hauteur* du pic, et le nombre total de cas à la fin restent les mêmes.
 
-Mais pourquoi ? À cause du *premier* concepte clé de l'épidémiologie :
+Mais pourquoi ? À cause du *premier* concept clé de l'épidémiologie :
 
 ![](pics/r.png)
 
@@ -163,11 +163,11 @@ La version courte du « Nombre de reproduction ». Il s'agit du nombre *moyen*
 
 **R** évolue au cours d'une vague, au fur et à mesure que l'immunité et les mesures d'intervention se développent.
 
-**R<sub>0</sub>** est la valeur de R *au début de la vague, avant l'immunité et les mesures d'intervention*. R<sub>0</sub> reflète la force du virus-même, mais il varie quand même d'un endroit à l'autre. Par exemple, R<sub>0</sub> est plus grand dans les villes denses qu'en campagne plus espacée.
+**R<sub>0</sub>** est la valeur de R *au début de la vague, avant l'immunité et les mesures d'intervention*. R<sub>0</sub> reflète la force du virus-même, mais il varie quand même d'un endroit à l'autre. Par exemple, R<sub>0</sub> est plus grand dans les villes densément peuplées que dans les campagnes.
 
-(La plupart des articles d'actualité - et même des publications scientifiques ! - confondent R et R<sub>0</sub>. Encore une fois, la terminologie scientifique est pleine d'absurdité)
+(La plupart des articles d'actualité - et même des publications scientifiques ! - confondent R et R<sub>0</sub>. Encore une fois, la terminologie scientifique est pleine d'absurdités)
 
-Le R<sub>0</sub> pour « la » grippe saisonnière tourne autour de 1,28[^r0_flu]. Cela signifie qu'au *début* d'une vague de grippe, chaque <icon i></icon> infecte 1,28 personnes *en moyenne.* (Si ça paraît étrange de ne pas avoir un nombre entier, souvenez-vous que la maman *moyenne* a 2,4 enfants. Cela ne veut pas dire qu'il y a des demi-enfants se gambadant un peu partout.)
+Le R<sub>0</sub> pour « la » grippe saisonnière tourne autour de 1,28[^r0_flu]. Cela signifie qu'au *début* d'une vague de grippe, chaque <icon i></icon> infecte 1,28 personnes *en moyenne.* (Si ça paraît étrange de ne pas avoir un nombre entier, souvenez-vous que la maman *moyenne* a 2,4 enfants. Cela ne veut pas dire qu'il y a des demi-enfants gambadant un peu partout.)
 
 [^r0_flu]: « The median R value for seasonal influenza was 1.28 (IQR: 1.19–1.37) » [Biggerstaff, M., Cauchemez, S., Reed, C. et al.](https://bmcinfectdis.biomedcentral.com/articles/10.1186/1471-2334-14-480) Traduction : « La valeur médiane de R pour l'influenza saisonnière était de 1,28 (IC : 1,19-1,37) »
 
@@ -188,7 +188,7 @@ Dans nos simulations - *au début et en moyenne* - un <icon i></icon> infecte qu
 		<iframe src="sim?stage=epi-6a&format=calc" width="285" height="255"></iframe>
 </div>
 
-Mais souvenez-vous, moins il y a de <span class="nowrap"><icon s></icon>,</span> plus les <icon s></icon> deviennent <icon i></icon> *lentement*. Le nombre de reproduction *actuel* (R) dépend non-seulement du nombre de reproduction *de base* (R<sub>0</sub>), mais *aussi* de combien de personnes ne sont plus Susceptibles <span class="nowrap"><icon s></icon>.</span> (Par exemple, en guérissant et en devenant naturellement immunisées.)
+Mais souvenez-vous, moins il y a de <span class="nowrap"><icon s></icon>,</span> plus les <icon s></icon> deviennent <icon i></icon> *lentement*. Le nombre de reproduction *actuel* (R) dépend non-seulement du nombre de reproduction *de base* (R<sub>0</sub>), mais *aussi* du nombre de personnes qui ne sont plus Susceptibles <span class="nowrap"><icon s></icon>.</span> (Par exemple, en guérissant et en devenant naturellement immunisées.)
 
 <div class="sim">
 		<iframe src="sim?stage=epi-6b&format=calc" width="285" height="390"></iframe>
@@ -228,13 +228,13 @@ C'est paradoxal. Le COVID-19 est extrêmement contagieux et pourtant, pour le co
 
 ![](pics/r4.png)
 
-(Si vous pensez que R<sub>0</sub> ou d'autres paramètres dans vos simulations sont trop haut/bas, c'est bien, vous défiez nos hypothèses ! Il y aura un mode « bac à sable » à la fin de ce guide, où vous pourrez entrer vos *propres* paramètres et voir ce que ça donne.)
+(Si vous pensez que R<sub>0</sub> ou d'autres paramètres dans nos simulations sont trop haut/bas, c'est bien, vous défiez nos hypothèses ! Il y aura un mode « bac à sable » à la fin de ce guide, où vous pourrez entrer vos *propres* paramètres et voir ce que ça donne.)
 
 *Toutes* les mesures contre le COVID-19 dont vous avez entendu parler - lavage des mains, distance sociale, confinements, auto-isolation, traçage des contacts et mise en quarantaine, port du masque et même « immunité collective » - elles ont toutes le même but :
 
 Obtenir R < 1.
 
-Maintenant, utilisons notre « simulateur de vol épidémiologique » pour répondre à la question suivante : Comment peut-on obtenir R < 1 *tout en protégeant notre santé mentale et financière ?**
+Maintenant, utilisons notre « simulateur de vol épidémiologique » pour répondre à la question suivante : Comment peut-on obtenir R < 1 **tout en protégeant notre santé mentale et financière ?**
 
 Préparez-vous à un atterrissage d'urgence...
 
@@ -245,11 +245,11 @@ Préparez-vous à un atterrissage d'urgence...
     </div>
 </div>
 
-... ça aurait pu être pire. Voici un univers parallèle que l'on a <span class="nowrap">évité :</span>
+... auraient pu être pires. Voici un univers parallèle que l'on a <span class="nowrap">évité :</span>
 
 ###Scénario 0 : On ne fait absolument rien
 
-Environ une personne atteinte du COVID-19 sur vingt a besoin de soins intensifs.[^icu_covid] Dans un pays développé comme les États-Unis, il y a une place en soins intensifs pour 3400 personnes.[^icu_us] Dès lors, pour 3400 personnes atteintes *en même temps*, les États-Unis peuvent en gérer 20 - soit 0,6% de la population.
+Environ 1 personne atteinte du COVID-19 sur 20 a besoin de soins intensifs.[^icu_covid] Dans un pays développé comme les États-Unis, il y a une place en soins intensifs pour 3400 personnes.[^icu_us] Dès lors, pour 3400 personnes atteintes *en même temps*, les États-Unis peuvent en gérer 20 - soit 0,6% de la population.
 
 [^icu_covid]: [« Percentage of COVID-19 cases in the United States from February 12 to March 16, 2020 that required intensive care unit (ICU) admission, by age group »](https://www.statista.com/statistics/1105420/covid-icu-admission-rates-us-by-age-group/).Traduction : « Pourcentage de cas de COVID-19 aux États-Unis du 12 février au 26 mars 2020 nécéssitant une admission en unité de soins intesifs, par groupe d'âge ». Entre 4,9% et 11,5% de *tous* les cas de COVID-19 ont eu besoin de soins intensifs. En choisissant généreusement l'estimation basse, cela nous fait 5%, soit 1 sur 20. Notez que cette proportion est propre à la pyramide des âges de ce pays. Elle sera plus haute dans les pays avec une population âgée et plus basse dans les pays avec une population jeune.
 
@@ -280,9 +280,9 @@ La stratégie « Aplatir la courbe » a été promue par tous les organismes d
 
 Cependant, les deux plans avaient des failles fatales (littéralement).
 
-Premièrement, voyons les deux principales manières « d'aplatir la courbe »: le lavage des mains et la distanciation sociale.
+D'abord, voyons les deux principales manières « d'aplatir la courbe »: le lavage des mains et la distanciation sociale.
 
-Intensifier le lavage des mains réduit les grippes et les rhumes, dans les pays riches, d'environ 25%[^handwashing], tandis que le confinement généralisé a réduit les contacts rapprochés d'environ 70%[^london]. Supposons alors que le lavage des mains peut réduire R *jusqu'à* 25% et que la distanciation sociale peut réduire R *jusqu'à* <span class="nowrap">70% :</span>
+Intensifier le lavage des mains réduit les grippes et les rhumes, dans les pays riches, d'environ 25%[^handwashing], tandis que le confinement généralisé à Londres a réduit les contacts rapprochés d'environ 70%[^london]. Supposons alors que le lavage des mains peut réduire R *jusqu'à* 25% et que la distanciation sociale peut réduire R *jusqu'à* <span class="nowrap">70% :</span>
 
 [^handwashing]: « All eight eligible studies reported that handwashing lowered risks of respiratory infection, with risk reductions ranging from 6% to 44% [pooled value 24% (95% CI 6–40%)]. » [Rabie, T. and Curtis, V.](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-3156.2006.01568.x) Traduction : « Les huit études valables ont rapporté que le lavage des mains réduisait le risque d'infections respiratoires, avec une réduction des risques allant de 6% à 44% [valeur moyenne 24% (IC 95% : 6-40%)]. » Note : Par simplicité, la valeur a été arrondie à 25% dans les simulations. On notera que, comme le pointe cette méta-analyse, la qualité des études sur le lavage des main (du moins dans les pays riches) est exécrable.
 
@@ -306,7 +306,7 @@ Trois observations :
 
 1. Le nombre total de cas *baisse* ! **Même si on n'arrive pas à R < 1, réduire R sauve quand même des vies en réduisant le dépassement au dessus du seuil d'immunité collective.** Beaucoup de gens s'imaginent « qu'aplatir la courbe » étale les cas sans toutefois réduire leur nombre total. C'est impossible dans *n'importe lequel* des modèles de base de l'épidémiologie. Mais parce que les médias d'actualité présentaient l'affirmation « 80% seront infectés » comme inévitable, les gens ont pensé que le nombre total de cas serait le même quoi qu'on fasse. *Soupir.*
 
-2. À cause des mesures supplémentaires, le nombre de cas actuels atteint un pic *avant* que l'immunité collective ne soit atteinte. En fait, dans cette simulation, le nombre total de cas passe *un tout petit peu* au dessus du seuil d'immunité collective - le plan du Royaume Uni ! À ce moment, R < 1, on peut abandonner toutes les autres mesures d'intervention et le COVID-19 reste contenu ! Eh bien, il y a quand même un problème...
+2. Grâce aux mesures supplémentaires, le nombre de cas actuels atteint un pic *avant* que l'immunité collective ne soit atteinte. En fait, dans cette simulation, le nombre total de cas passe *un tout petit peu* au dessus du seuil d'immunité collective - le plan du Royaume Uni ! À ce moment, R < 1, on peut abandonner toutes les autres mesures d'intervention et le COVID-19 reste contenu ! Eh bien, il y a quand même un problème...
 
 3. On sature les unités de soins intensifs. Pour plusieurs mois. (et souvenez-vous, on a pourtant *déjà* triplé la capacité pour ces simulations)
 
@@ -339,7 +339,7 @@ Cette solution a été suggérée en premier par le rapport du 16 mars de l'Impe
 
 [^lockdown_harvard]: « Absent other interventions, a key metric for the success of social distancing is whether critical care capacities are exceeded. To avoid this, prolonged or intermittent social distancing may be necessary into 2022. » [Kissler and Tedijanto et al](https://science.sciencemag.org/content/early/2020/04/14/science.abb5793) Traduction : « Sans autres interventions, un indicateur clé du succès de la distanciation sociale est si oui ou non les soins intensifs sont saturés. Pour éviter cela, une distanciation sociale prolongée ou intermittente pourrait être nécessaire jusqu'en 2022. »
 
-**Voici une simulation :** (Après avoir lancé le scénario « pré-enregistré », vous pourrez essayer de simuler votre *propre* plan de confinement, en déplaçant les curseurs *pendant* la simulation ! Gardez en tête que vous pouvez mettre en pause et reprendre la simulation, ainsi que changer sa vitesse)
+**Voici une simulation :** (Après avoir lancé le scénario « pré-enregistré », vous pourrez essayer de simuler votre *propre* plan de confinement, en déplaçant les curseurs *pendant* la simulation ! Vous pouvez aussi mettre en pause et reprendre la simulation, ainsi que changer sa vitesse)
 
 <div class="sim">
 		<iframe src="sim?stage=int-4&format=lines" width="800" height="540"></iframe>
@@ -349,13 +349,13 @@ Cela *pourrait* maintenir le nombre de cas en dessous de la capacité des soins 
 
 Enfin bon, c'est bien joli de dessiner une ligne disant « capacité des soins intensifs », mais il y a beaucoup de choses importantes qu'on *ne peut pas* simuler ici. Comme :
 
-**La santé mentale :** La solitude est un des facteurs de dépression, d'anxiété et de suicide les plus importants. C'est tout aussi associé à une mort prématurée que ne l'est le fait de fumer 15 cigarettes par jour.[^loneliness]
+**La santé mentale :** La solitude est un des facteurs de dépression, d'anxiété et de suicide les plus importants. On estime qu'elle est aussi dangereuse que de fumer 15 cigarettes par jour.[^loneliness]
 
 [^loneliness]: Voir la [Figure 6 de Holt-Lunstad & Smith 2010](https://journals.sagepub.com/doi/abs/10.1177/1745691614568352). Bien sûr, grosse mise en garde : ils ont trouvé une *corrélation*. Mais à moins que vous ne vouliez imposer aléatoirement à des gens d'être solitaires pour toute leur vie, des indices observationnels sont tout ce que vous pourrez avoir.
 
 **Santé financière :** « Et l'économie alors ? » sonne comme si vous vous préoccupiez plus de l'argent que de vies à sauver, mais « l'économie » n'est pas seulement des actions en bourse : c'est la capacité des personnes à fournir toit et nourriture à leurs proches, à investir dans le futur de leurs enfants, à jouir de l'art, de la bonne nourriture, des jeux vidéos - les trucs qui font que la vie vaut la peine d'être vécue. Par ailleurs, la pauvreté *elle-même* a un impact désastreux sur la santé mentale et physique.
 
-Nous ne disons pas qu'on ne *devrait pas* se confiner à nouveau ! Nous verrons les confinements « disjoncteurs » plus tard. Mais ce n'est pas l'idéal.
+Nous ne sommes pas en train de dire qu'on ne *devrait pas* se confiner à nouveau ! Nous verrons les confinements « disjoncteurs » plus tard. Mais ce n'est pas l'idéal.
 
 Mais attendez... Taïwan et la Corée du Sud n'ont-elles pas *déjà* contenu le COVID-19 ? Et cela pendant 4 mois, *sans* long confinement ?
 
@@ -363,9 +363,9 @@ Comment ?
 
 ###Scénario 4 : Tester, Tracer, Isoler
 
-*« Bien sûr, nous \*pourrions\* avoir fait comme Taïwan et la Corée du Sud ont fait au départ, mais c'est désormais trop tard. On a loupé le départ. »*
+*« Bien sûr, nous \*aurions pu\* faire comme Taïwan et la Corée du Sud ont fait au départ, mais c'est désormais trop tard. On a loupé le départ. »*
 
-Mais c'est justement ça ! « Un confinement n'est pas un remède, c'est juste un retour à la case départ »… **et c'est d'un nouveau départ dont nous avons besoin.**
+Mais c'est justement ça ! « Un confinement n'est pas un remède, c'est juste un nouveau départ »… **et c'est d'un nouveau départ dont nous avons besoin.**
 
 Pour comprendre comment Taïwan et la Corée du Sud ont contenu le COVID-19, nous devons comprendre le déroulement précis d'une infection typique au COVID-19[^timeline] :
 
@@ -391,7 +391,7 @@ C'est ce qu'on appelle le **traçage des contacts**. C'est une vieille idée, el
 
 (Il nous permet aussi d'utiliser nos tests en nombre limité plus efficacement, pour trouver les <span class="nowrap"><icon i></icon>s</span> pré-symptomatiques sans avoir besoin de tester tout le monde.)
 
-Traditionnellement, les contacts sont trouvés grâce à des entretiens physiques, mais à eux *seuls*, ils sont trop lents pour la fenêtre d'environ 48 heures du COVID-19. C'est pourquoi les traceurs de contacts ont besoin d'aide, et sont aidés par — *PAS* remplacés par — des applis de traçage de contacts.
+Traditionnellement, les contacts sont trouvés grâce à des entretiens, mais à eux *seuls*, ils sont trop lents pour la fenêtre d'environ 48 heures du COVID-19. C'est pourquoi les traceurs de contacts ont besoin d'aide, et sont aidés par — *PAS* remplacés par — des applis de traçage de contacts.
 
 (Cette idée n'est pas venus des « techos » : utiliser une appli pour combattre le COVID-19 a été proposé en premier par [une équipe d'épidémiologistes d'Oxford](https://science.sciencemag.org/content/early/2020/04/09/science.abb6936).)
 
@@ -462,7 +462,7 @@ Le pessimiste invente le parachute.
 
 ###Scénario 4+ : Masques pour tous, été, « Disjoncteur » 
 
-Et si R<sub>0</sub> était bien plus grand que ce que l'on pense, et que les actions précédentes, même aidées d'une légère distanciation, n'était *toujours* pas suffisantes pour rendre R < 1 ?
+Et si R<sub>0</sub> était bien plus grand que ce que l'on pense, et que les actions précédentes, même aidées d'une légère distanciation, n'étaient *toujours* pas suffisantes pour rendre R < 1 ?
 
 Souvenez-vous, même si on ne peut rendre R < 1, minimiser R permet quand même de réduire le « débordement » du total de cas, donc de sauver des vies. Pour autant, R < 1 reste l'idéal, et voici d'autres moyens pour le réduire :
 
