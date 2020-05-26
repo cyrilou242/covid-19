@@ -24,7 +24,7 @@
 
 « La seule chose dont il faille avoir peur est la peur elle-même » - Franklin D. Roosevelt. Conseil douteux.
 
-Bien sûr, on nous rappelle à raison de ne pas se ruer sur le papier toilette. Mais si les responsables politiques craignent la peur et le désordre, ils minimiseront aussi les véritables dangers pour éviter toute panique générale. La peur n'est pas un problème. Le problème, c'est la manière dont nous canalisons cette peur. La peur nous donne l'énergie pour faire face aux dangers de l'instant, et nous prépare aux dangers futurs.
+Bien sûr, on nous rappelle à raison de ne pas se ruer sur le papier toilette. Mais si les responsables politiques craignent la peur et le désordre, ils oublieront aussi les véritables dangers pour éviter toute panique générale. La peur n'est pas un problème. Le problème, c'est la manière dont nous canalisons cette peur. La peur nous donne l'énergie pour faire face aux dangers de l'instant, et nous prépare aux dangers futurs.
 
 
 Pour être honnête, nous (Marcel - épidémiologiste et Nicky - art/code) sommes inquiets. Tu l'es aussi n'est-ce pas ? C'est pourquoi de nos peurs sont nées ces **simulations interactives**, pour que *vous* puissiez à votre tour canaliser vos peurs et comprendre :
@@ -56,7 +56,7 @@ Créons notre propre « simulateur de vol épidémique » (très, *très* sim
 
 ![](pics/spread.png)
 
-On estime *qu'au début* de l'épidémie de COVID-19, le virus allait d'un <icon i></icon> à un <icon s></icon> tous les 4 jours, *en moyenne*.[^serial_interval] (pour rappel, il y a beaucoup de variations)
+On estime qu'*au début* de l'épidémie de COVID-19, le virus allait d'un <icon i></icon> à un <icon s></icon> tous les 4 jours, *en moyenne*.[^serial_interval] (pour rappel, il y a beaucoup de variations)
 
 [^serial_interval]: « The mean [serial] interval was 3.96 days (95% CI 3.53–4.39 days). » [Du Z, Xu X, Wu Y, Wang L, Cowling BJ, Ancel Meyers L](https://wwwnc.cdc.gov/eid/article/26/6/20-0357_article) Traduction : « L'intervalle [sériel] moyen était de 3,96 jours (IC 95% : 3,53–4,39 jours) ». (Attention : les pré-publications ne sont pas considérées comme des versions finales)
 
@@ -78,7 +78,7 @@ Ceci est la **courbe de croissance exponentielle.** Ça commence petit, puis ça
 
 ![](pics/exponential.png)
 
-Pour autant, cette simulation est fausse. La croissance exponentielle, heureusement, ne peut pas durer. Si une partie de la population a *déjà* le virus, cela empêche sa diffusion :
+Mais cette simulation est fausse. La croissance exponentielle, heureusement, ne peut pas durer. Si une partie de la population a *déjà* le virus, cela empêche sa diffusion :
 
 ![](pics/susceptibles.png)
 
@@ -157,7 +157,7 @@ Mais pourquoi ? À cause du *premier* concept clé de l'épidémiologie :
 
 ![](pics/r.png)
 
-La version courte du « Nombre de reproduction ». Il s'agit du nombre *moyen* de personnes qu'un <span class="nowrap"><icon i></icon></span> infecte *avant* qu'il ne guérisse (ou décède).
+Abréviation de « Nombre de reproduction ». Il s'agit du nombre *moyen* de personnes qu'un <span class="nowrap"><icon i></icon></span> infecte *avant* qu'il ne guérisse (ou décède).
 
 ![](pics/r2.png)
 
@@ -167,7 +167,7 @@ La version courte du « Nombre de reproduction ». Il s'agit du nombre *moyen*
 
 (La plupart des articles d'actualité - et même des publications scientifiques ! - confondent R et R<sub>0</sub>. Encore une fois, la terminologie scientifique est pleine d'absurdités)
 
-Le R<sub>0</sub> pour « la » grippe saisonnière tourne autour de 1,28[^r0_flu]. Cela signifie qu'au *début* d'une vague de grippe, chaque <icon i></icon> infecte 1,28 personnes *en moyenne.* (Si ça paraît étrange de ne pas avoir un nombre entier, souvenez-vous que la maman *moyenne* a 2,4 enfants. Cela ne veut pas dire qu'il y a des demi-enfants gambadant un peu partout.)
+Le R<sub>0</sub> pour « la » grippe saisonnière tourne autour de 1,28[^r0_flu]. Cela signifie qu'au *début* d'une vague de grippe, chaque <icon i></icon> infecte 1,28 personnes *en moyenne.* (Si ça paraît étrange de ne pas avoir un nombre entier, souvenez-vous que la maman *moyenne* a 2,4 enfants. Cela ne veut pas dire qu'il y a des demi-enfants qui gambadent un peu partout.)
 
 [^r0_flu]: « The median R value for seasonal influenza was 1.28 (IQR: 1.19–1.37) » [Biggerstaff, M., Cauchemez, S., Reed, C. et al.](https://bmcinfectdis.biomedcentral.com/articles/10.1186/1471-2334-14-480) Traduction : « La valeur médiane de R pour l'influenza saisonnière était de 1,28 (IC : 1,19-1,37) »
 
@@ -182,7 +182,7 @@ Dans nos simulations - *au début et en moyenne* - un <icon i></icon> infecte qu
 
 [^r0_caveats_sim]: Cela suppose qu'on est infectieux de manière constante tout au long de la « période infectieuse ». Encore une fois, c'est une simplification pour aider à la compréhension.
 
-**Jouez avec ce calculateur de R<sub>0</sub> pour voir comment R<sub>0</sub> dépend du temps de guérison et de la fréquence de nouvelle infection :**
+**Jouez avec ce calculateur de R<sub>0</sub> pour voir comment R<sub>0</sub> dépend du temps de guérison et de la fréquence des nouvelles infections :**
 
 <div class="sim">
 		<iframe src="sim?stage=epi-6a&format=calc" width="285" height="255"></iframe>
@@ -228,7 +228,7 @@ C'est paradoxal. Le COVID-19 est extrêmement contagieux et pourtant, pour le co
 
 ![](pics/r4.png)
 
-(Si vous pensez que R<sub>0</sub> ou d'autres paramètres dans nos simulations sont trop haut/bas, c'est bien, vous défiez nos hypothèses ! Il y aura un mode « bac à sable » à la fin de ce guide, où vous pourrez entrer vos *propres* paramètres et voir ce que ça donne.)
+(Si vous pensez que R<sub>0</sub> ou d'autres paramètres dans nos simulations sont trop haut/bas, c'est bien que vous défiiez nos hypothèses ! Il y aura un mode « bac à sable » à la fin de ce guide, où vous pourrez entrer vos *propres* paramètres et voir ce que ça donne.)
 
 *Toutes* les mesures contre le COVID-19 dont vous avez entendu parler - lavage des mains, distance sociale, confinements, auto-isolation, traçage des contacts et mise en quarantaine, port du masque et même « immunité collective » - elles ont toutes le même but :
 
@@ -247,15 +247,15 @@ Préparez-vous à un atterrissage d'urgence...
 
 ... auraient pu être pires. Voici un univers parallèle que l'on a <span class="nowrap">évité :</span>
 
-###Scénario 0 : On ne fait absolument rien
+### Scénario 0 : On ne fait absolument rien
 
-Environ 1 personne atteinte du COVID-19 sur 20 a besoin de soins intensifs.[^icu_covid] Dans un pays développé comme les États-Unis, il y a une place en soins intensifs pour 3400 personnes.[^icu_us] Dès lors, pour 3400 personnes atteintes *en même temps*, les États-Unis peuvent en gérer 20 - soit 0,6% de la population.
+Environ 1 personne atteinte du COVID-19 sur 20 a besoin de soins intensifs.[^icu_covid] Dans un pays développé comme les États-Unis, il y a 1 place en soins intensifs pour 3400 personnes.[^icu_us] Donc, si 3400 personnes sont atteintes *en même temps*, les États-Unis peuvent en gérer 20 - soit 0,6% de la population.
 
 [^icu_covid]: [« Percentage of COVID-19 cases in the United States from February 12 to March 16, 2020 that required intensive care unit (ICU) admission, by age group »](https://www.statista.com/statistics/1105420/covid-icu-admission-rates-us-by-age-group/).Traduction : « Pourcentage de cas de COVID-19 aux États-Unis du 12 février au 26 mars 2020 nécéssitant une admission en unité de soins intesifs, par groupe d'âge ». Entre 4,9% et 11,5% de *tous* les cas de COVID-19 ont eu besoin de soins intensifs. En choisissant généreusement l'estimation basse, cela nous fait 5%, soit 1 sur 20. Notez que cette proportion est propre à la pyramide des âges de ce pays. Elle sera plus haute dans les pays avec une population âgée et plus basse dans les pays avec une population jeune.
 
-[^icu_us]: « Number of ICU beds = 96,596 ». De [the Society of Critical Care Medicine](https://sccm.org/Blog/March-2020/United-States-Resource-Availability-for-COVID-19). Tradution : « Nombre de lits en unité de soins intensifs = 96'596 » La population des États-Unis était de 328'200'000 en 2019. 96'596 sur 328'200'000 environ 1 sur 3400.
+[^icu_us]: « Number of ICU beds = 96,596 ». De [the Society of Critical Care Medicine](https://sccm.org/Blog/March-2020/United-States-Resource-Availability-for-COVID-19). Tradution : « Nombre de lits en soins intensifs = 96'596 » La population des États-Unis était de 328'200'000 en 2019. 96'596 sur 328'200'000 environ 1 sur 3400.
 
-Même si cette capacité était *plus que triplée* pour atteindre 2%, voici ce qui se serait passé *si on n'avait absolument rien fait* :
+Même si on *triple* cette capacité pour atteindre 2%, voici ce qui se serait passé *si on n'avait absolument rien fait* :
 
 <div class="sim">
 		<iframe src="sim?stage=int-1&format=lines" width="800" height="540"></iframe>
@@ -272,13 +272,13 @@ Même si seulement 0,5% des personnes infectées meurent - une estimation optimi
 
 ###Scénario 1 : Aplatir la courbe / Immunité collective
 
-La stratégie « Aplatir la courbe » a été promue par tous les organismes de santé publique, pendant que le plan de base « d'immunité collective » du Royaume Uni était universellement décrié. Ces deux plans ont *le même objectif*. Le Royaume Uni a juste mal communiqué le sien.[^yong]
+La stratégie « Aplatir la courbe » a été promue par tous les organismes de santé publique, pendant que le plan de base « d'immunité collective » du Royaume Uni a été universellement décrié. Ces deux plans ont *le même objectif*. Le Royaume Uni a juste mal communiqué le sien.[^yong]
 
 [^yong]: « He says that the actual goal is the same as that of other countries: flatten the curve by staggering the onset of infections. As a consequence, the nation may achieve herd immunity; it’s a side effect, not an aim. [...] The government’s actual coronavirus action plan, available online, doesn’t mention herd immunity at all. »
 
     Tiré de [The Atlantic article by Ed Yong](https://www.theatlantic.com/health/archive/2020/03/coronavirus-pandemic-herd-immunity-uk-boris-johnson/608065/) Traduction : « Il dit que l'objectif est en fait le même que les autres pays : aplatir la courbe en étalant le départ des infections. Par conséquent, le pays pourrait atteindre l'immunité collective; c'est un effet secondaire, pas un but en soi. [...] En fait, le plan d'action du gouvernement contre le coronavirus, disponible en ligne, ne mentionne pas du tout l'immunité collective. »
 
-Cependant, les deux plans avaient des failles fatales (littéralement).
+Cependant, les deux plans avaient une faille fatale (littéralement).
 
 D'abord, voyons les deux principales manières « d'aplatir la courbe »: le lavage des mains et la distanciation sociale.
 
@@ -353,7 +353,7 @@ Enfin bon, c'est bien joli de dessiner une ligne disant « capacité des soins 
 
 [^loneliness]: Voir la [Figure 6 de Holt-Lunstad & Smith 2010](https://journals.sagepub.com/doi/abs/10.1177/1745691614568352). Bien sûr, grosse mise en garde : ils ont trouvé une *corrélation*. Mais à moins que vous ne vouliez imposer aléatoirement à des gens d'être solitaires pour toute leur vie, des indices observationnels sont tout ce que vous pourrez avoir.
 
-**Santé financière :** « Et l'économie alors ? » sonne comme si vous vous préoccupiez plus de l'argent que de vies à sauver, mais « l'économie » n'est pas seulement des actions en bourse : c'est la capacité des personnes à fournir toit et nourriture à leurs proches, à investir dans le futur de leurs enfants, à jouir de l'art, de la bonne nourriture, des jeux vidéos - les trucs qui font que la vie vaut la peine d'être vécue. Par ailleurs, la pauvreté *elle-même* a un impact désastreux sur la santé mentale et physique.
+**Santé financière :** « Et l'économie alors ? » sonne comme si vous vous préoccupiez plus de l'argent que de vies à sauver, mais « l'économie » n'est pas seulement des actions en bourse : c'est la capacité des personnes à fournir toit et nourriture à leurs proches, à investir dans le futur de leurs enfants, à jouir de l'art, de la bonne nourriture, des jeux vidéos - les trucs qui font que la vie vaut la peine d'être vécue. Et puis la pauvreté *elle-même* a un impact désastreux sur la santé mentale et physique.
 
 Nous ne sommes pas en train de dire qu'on ne *devrait pas* se confiner à nouveau ! Nous verrons les confinements « disjoncteurs » plus tard. Mais ce n'est pas l'idéal.
 
@@ -385,7 +385,7 @@ Mais si nous trouvons *et mettons en quarantaine* les contacts récents d'un cas
 
 ![](pics/timeline3.png)
 
-C'est ce qu'on appelle le **traçage des contacts**. C'est une vieille idée, elle a été utilisée à une échelle sans précédent pour contenir Ebola[^ebola], et maintenant elle est une partie centrale de comment Taïwan et la Corée du Sud contiennent le Covdi-19 !
+C'est ce qu'on appelle le **traçage des contacts**. C'est une vieille idée, elle a été utilisée à une échelle sans précédent pour contenir Ebola[^ebola], et maintenant elle est une partie centrale du plan de Taïwan et de la Corée du Sud pour contenir le COVID-19 !
 
 [^ebola]: “Contact tracing was a critical intervention in Liberia and represented one of the largest contact tracing efforts during an epidemic in history.” [Swanson KC, Altare C, Wesseh CS, et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6152989/) Traduction : « Le traçage des contacts a été une intervention critique au Liberia et a représenté un des plus grands efforts de traçage de contacts de l'Histoire. »
 
@@ -405,7 +405,7 @@ Voici comment ça marche :
 
 (et [voici la BD entière](https://ncase.me/contact-tracing/))
 
-Avec d'autres équipes similaires comme TCN Protocol[^tcn] et MIT PACT[^pact], ils ont inspiré Apple et Google à intégrer un traçage de contacts respectueux de la vie privée dans Android/iOS.[^gapple] (Vous ne faites pas confiance à Google/Apple ? Bien ! La beauté de ce système est qu'il n'a *pas besoin* de confiance !) Bientôt, votre agence de santé publique locale pourrait vous demander de télécharger une appli. Si elle est respectueuse de la vie privée et avec un code publique, je vous en prie, faites-le !
+Avec d'autres équipes similaires comme TCN Protocol[^tcn] et MIT PACT[^pact], ils ont inspiré Apple et Google à intégrer un traçage de contacts respectueux de la vie privée dans Android/iOS.[^gapple] (Vous ne faites pas confiance à Google/Apple ? Bien ! La beauté de ce système est qu'il n'a *pas besoin* de confiance !) Bientôt, votre agence de santé publique locale pourrait vous demander de télécharger une appli. Si elle est respectueuse de la vie privée et avec un code public, je vous en prie, faites-le !
 
 [^tcn]: [Temporary Contact Numbers, un protocole de traçage de contact décentralisé, respectueux de la vie privée](https://github.com/TCNCoalition/TCN#tcn-protocol)
 
@@ -486,7 +486,7 @@ Cependant, on ne connait pas encore précisément l'impact des masques sur le CO
 
 [^replication]: Tout véritable scientifique qui lit cette dernière phrase est probalement plié de rire. Voir : [p-hacking](https://fr.wikipedia.org/wiki/Data_dredging), [crise de la reproductibilité](https://fr.wikipedia.org/wiki/Crise_de_la_reproductibilit%C3%A9))
 
-Seulement, les pandémies c'est comme le poker. **Ne pariez que lorsque vous êtes sûr à 95%, et vous perdrez tout ce qui est en jeu.** Comme le note dans un récent article du British Medical Journal,[^precautionary] dans un contexte d'incertitude il est *nécessaire* d'appliquer des analyses coûts-avantages. Par exemple :
+Seulement, les pandémies c'est comme le poker. **Si vous ne pariez que lorsque vous êtes sûr à 95%, vous perdrez tout ce qui est en jeu.** Comme le note dans un récent article du British Medical Journal,[^precautionary] dans un contexte d'incertitude il est *nécessaire* d'appliquer des analyses coûts-avantages. Par exemple :
 
 [^precautionary]: « It is time to apply the precautionary principle » [Trisha Greenhalgh et al \[PDF\]](https://www.bmj.com/content/bmj/369/bmj.m1435.full.pdf) Traduction : « Il est temps d'appliquer le principe de précaution. »
 
@@ -694,7 +694,7 @@ Qu'est ce que ça veut dire pour vous maintenant ?
 
 **Pour tout le monde :** Respectez le confinement pour qu'on puisse sortir de la Phase I aussi vite que possible. Lavez-vous les mains. Fabriquez vos propres masques. Téléchargez une application de traçage des contacts *respectueuse de votre vie privée* lorsqu'elles seront disponibles le mois prochain. Restez en forme, physiquement et mentalement ! Et écrivez à votre décideur local de bouger ses fesses et...
 
-**Pour les décideurs :** Faites des lois qui supportent ceux qui doivent se mettre en auto-isolement/quarantaine. Engagez plus d'agents de traçage manuel des contacts, *supportés** par des applications de traçage des contacts qui respectent la vie privée. Dirigez plus de fonds vers les trucs qu'on devrait fabriquer, comme...
+**Pour les décideurs :** Faites des lois qui supportent ceux qui doivent se mettre en auto-isolement/quarantaine. Engagez plus d'agents de traçage manuel des contacts, *supportés* par des applications de traçage des contacts qui respectent la vie privée. Dirigez plus de fonds vers les trucs qu'on devrait fabriquer, comme...
 
 **Pour les fabriquants :** Fabriquez des tests. Fabriquez des respirateurs. Fabriquez des équipements de protection individuelle pour les hôpitaux. Fabriquez des tests. Fabriquez des masques. Fabriquez des applications. Fabriquez des antiviraux, des prophylactiques et autres traitements qui ne sont pas des vaccins. Fabriquez des vaccins. Fabriquez des tests. Fabriquez des tests. Fabriquez de l'espoir.
 
